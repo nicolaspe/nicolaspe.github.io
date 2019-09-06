@@ -3,12 +3,13 @@ let container, renderer, camera, scene;
 let controls, loader, timekeep;
 let d_light1, d_light2;
 let surface, surf_mat;
-let proj_list;
+let proj_data, proj_slugs;
 let videos, vids_img, vids_cnt, vids_tex, vids_mat;
 let vid_wid, vid_hei;
-let vids_index, bVideosLoaded, bPlaying;
+let curr_vid, bVideosLoaded, bPlaying;
 
 window.addEventListener('load', init);
+
 
 // === INITIALIZATION
 function init(){
@@ -35,12 +36,57 @@ function init(){
 
   timekeep = 0;
   bVideosLoaded = false;
-  proj_list = ["inner_cadence", "peaceful_forest"];
+  curr_vid = "";
+  // proj_slugs = ["inner_cadence", "peaceful_forest"];
 
   createEnvironment();
-  loadVideos();
+  loadProjects();
+  // loadVideos();
 
 	animate();
+}
+
+
+
+// === LOAD PROJECT DATA
+function loadProjects(){
+  proj_slugs = [];
+
+  let list = document.createElement( 'ul' );
+
+  $.getJSON("./src/content.json", function(json){
+    proj_data = json;
+
+    proj_data["work"].forEach(proj => {
+      if(proj["display"] != 0){
+        // get project names and slugs
+        let p_name = proj["name"];
+        let p_slug = proj["slug"];
+
+        // create the list
+        let item_elem = document.createElement( 'li' );
+        // create link
+        let item_link = document.createElement( 'a' );
+        item_link.textContent = p_name;
+        item_link.id = p_slug;
+        item_link.href = "/portfolio/" + p_slug + ".html";
+        item_link.onmouseover = projectOnHover; 
+        item_link.onmouseout  = projectOnLeave;
+        // append link and element
+        item_elem.appendChild( item_link );
+        list.appendChild( item_elem );
+
+        // add data to the list
+        proj_slugs.push( p_slug );
+      }
+    });
+
+    // add list to site
+    document.querySelector('#project_list').appendChild( list );
+    
+    // add videos 
+    loadVideos();
+	});
 }
 
 
@@ -65,16 +111,27 @@ function onKeyPress( event ) {
       }
       break;
     case '1':
-      vids_index = 0;
+      curr_vid = proj_slugs[0];
       updateVideoState();
       break;
     case '2':
-      vids_index = 1;
+      curr_vid = proj_slugs[1];
       updateVideoState();
       break;
     default:
       break;
   }
+}
+function projectOnHover( event ){
+  if( proj_slugs.indexOf(event.target.id) >= 0 ){ 
+    curr_vid = event.target.id;
+    bPlaying = true;
+    updateVideoState();
+  }
+}
+function projectOnLeave(){
+  bPlaying = false;
+  updateVideoState();
 }
 
 
@@ -86,10 +143,10 @@ function render(){
   timekeep += 0.06;
 
   update_surface();
-  if( bPlaying && videos[vids_index].readyState === videos[vids_index].HAVE_ENOUGH_DATA ){
-    vids_cnt[vids_index].drawImage( videos[vids_index], 0, 0 );
-    if( vids_tex[vids_index] ){
-      vids_tex[vids_index].needsUpdate = true;
+  if( bPlaying && videos[curr_vid].readyState === videos[curr_vid].HAVE_ENOUGH_DATA ){
+    vids_cnt[curr_vid].drawImage( videos[curr_vid], 0, 0 );
+    if( vids_tex[curr_vid] ){
+      vids_tex[curr_vid].needsUpdate = true;
     }
   }
 
@@ -144,7 +201,7 @@ function createEnvironment(){
 // === VIDEO
 function loadVideos(){
   bPlaying = false;
-  vids_index = 0;
+  curr_vid = proj_slugs[0];
   vid_wid = 800;
   vid_hei = 450;
 
@@ -165,34 +222,34 @@ function loadVideos(){
   vids_mat = [];
   
   // VIDEO FILE LOADING
-  for (let i = 0; i < proj_list.length; i++) {
-    let slug = proj_list[i];
+  for (let i = 0; i < proj_slugs.length; i++) {
+    let slug = proj_slugs[i];
     let file_name = file_path + slug + file_ext;
 
-    videos[i] = document.createElement( 'video' );
-    videos[i].src = file_name;
-    videos[i].loop = true;
-    videos[i].addEventListener('loadeddata', () => {
-      videos[i].pause();
+    videos[slug] = document.createElement( 'video' );
+    videos[slug].src = file_name;
+    videos[slug].loop = true;
+    videos[slug].addEventListener('loadeddata', () => {
+      videos[slug].pause();
    
       // VIDEO IMAGE REFERENCE
-      vids_img[i] = document.createElement( 'canvas' );
-      vids_img[i].width  = vid_wid;
-      vids_img[i].height = vid_hei;
+      vids_img[slug] = document.createElement( 'canvas' );
+      vids_img[slug].width  = vid_wid;
+      vids_img[slug].height = vid_hei;
       
       // VIDEO IMAGE CONTEXT
-      vids_cnt[i] = vids_img[i].getContext( '2d' );
-      vids_cnt[i].fillStyle = "#00000000";
-      vids_cnt[i].fillRect( 0, 0, vid_wid, vid_hei ); 
+      vids_cnt[slug] = vids_img[slug].getContext( '2d' );
+      vids_cnt[slug].fillStyle = "#00000000";
+      vids_cnt[slug].fillRect( 0, 0, vid_wid, vid_hei ); 
    
       // VIDEO IMAGE TEXTURE
-      vids_tex[i] = new THREE.Texture( vids_img[i] );
-      vids_tex[i].minFilter = THREE.LinearFilter;
-      vids_tex[i].magFilter = THREE.LinearFilter;
+      vids_tex[slug] = new THREE.Texture( vids_img[slug] );
+      vids_tex[slug].minFilter = THREE.LinearFilter;
+      vids_tex[slug].magFilter = THREE.LinearFilter;
    
       // VIDEO MATERIAL
-      vids_mat[i] = new THREE.MeshPhongMaterial({
-        map: vids_tex[i],
+      vids_mat[slug] = new THREE.MeshPhongMaterial({
+        map: vids_tex[slug],
         specular: 0xeeeeee,
         emissive: 0x000000,
         overdraw: true,
@@ -204,25 +261,23 @@ function loadVideos(){
 
      //  console.log("> video " + i + " loaded");
     } , false); 
-    videos[i].load();
+    videos[slug].load();
   }
 }
-
 function updateVideoState(){
   // check if video needs to play or not
-  if(bPlaying) {
-    videos[vids_index].play();
+  if( bPlaying ) {
+    videos[curr_vid].play();
     // assign video material!
-    surface.material = vids_mat[vids_index];
+    surface.material = vids_mat[curr_vid];
     d_light1.intensity = 0.25;
     d_light2.intensity = 0.25;
   }
   else {
-    videos[vids_index].pause();
+    videos[curr_vid].pause();
     // go back to original material
     surface.material = surf_mat;
     d_light1.intensity = 0.5;
     d_light2.intensity = 0.5;
   }
-  // console.log("> (" + bPlaying + ") playing video " + vids_index);
 }
