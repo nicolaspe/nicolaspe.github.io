@@ -1,0 +1,80 @@
+{
+  "menu": ["work", "about"],
+  "work": [
+    {
+      "name": "inner cadence",
+      "filename": "inner_cadence",
+      "display": 1
+    },
+    {
+      "name": "collected ego",
+      "filename": "collected_ego",
+      "display": 1
+    },
+    {
+      "name": "coalition",
+      "filename": "coalition",
+      "display": 1
+    },
+    {
+      "name": "lost realities",
+      "filename": "lost_realities",
+      "display": 0
+    },
+    {
+      "name": "me as myself",
+      "filename": "memyself",
+      "display": 1
+    },
+    {
+      "name": "competing voices",
+      "filename": "compvoices",
+      "display": 1
+    },
+    {
+      "name": "rhythmic skin",
+      "filename": "rhythmic_skin",
+      "display": 1
+    },
+    {
+      "name": "everyday windows",
+      "filename": "everydaywindows",
+      "display": 1
+    },
+    {
+      "name": "extra",
+      "filename": "extra",
+      "display": 1
+    },
+    {
+      "name": "peaceful forest",
+      "filename": "peaceful_forest",
+      "display": 1
+    },
+    {
+      "name": "mesh media",
+      "filename": "meshmedia",
+      "display": 1
+    },
+    {
+      "name": "m e e t_  re_mote",
+      "filename": "meet_remote",
+      "display": 0
+    },
+    {
+      "name": "computer duet",
+      "filename": "comp_duet",
+      "display": 0
+    },
+    {
+      "name": "barranco",
+      "filename": "barranco",
+      "display": 0
+    },
+    {
+      "name": "creative coding",
+      "filename": "creative_coding",
+      "display": 0
+    }
+  ]
+}
