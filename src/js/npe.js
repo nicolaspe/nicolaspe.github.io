@@ -103,24 +103,24 @@ function onWindowResize(){
 function onKeyPress( event ) {
   let key = String.fromCharCode( parseInt( event.keyCode ) );
 
-  switch (key) {
-    case 'p':
-      if(bVideosLoaded) {
-        bPlaying = !bPlaying;
-        updateVideoState();
-      }
-      break;
-    case '1':
-      curr_vid = proj_slugs[0];
-      updateVideoState();
-      break;
-    case '2':
-      curr_vid = proj_slugs[1];
-      updateVideoState();
-      break;
-    default:
-      break;
-  }
+  // switch (key) {
+  //   case 'p':
+  //     if(bVideosLoaded) {
+  //       bPlaying = !bPlaying;
+  //       updateVideoState();
+  //     }
+  //     break;
+  //   case '1':
+  //     curr_vid = proj_slugs[0];
+  //     updateVideoState();
+  //     break;
+  //   case '2':
+  //     curr_vid = proj_slugs[1];
+  //     updateVideoState();
+  //     break;
+  //   default:
+  //     break;
+  // }
 }
 function projectOnHover( event ){
   if( proj_slugs.indexOf(event.target.id) >= 0 ){ 
