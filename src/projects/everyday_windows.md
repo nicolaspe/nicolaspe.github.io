@@ -1,10 +1,12 @@
----
+<!--
 title: "Everyday Windows"
 date: "2017-12-11"
 display: true
 image: "img/portfolio/evwi_prev.jpg"
 weight: 1
----
+-->
+
+# Everyday Windows
 
 A set of VR experiences foregrounding sociopolitical aspects of everyday sexism.
 <!--more-->

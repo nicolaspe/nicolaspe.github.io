@@ -1,10 +1,12 @@
----
+<!--
 title: "Rhythmic Skin"
 date: "2018-05-01"
 display: true
 image: "img/portfolio/rhythmsk.jpg"
 weight: 1
----
+-->
+
+# Rhythmic Skin
 
 A wearable MIDI-enabled device loaded with haptic motors for musical performance or learning.
 <!--more-->

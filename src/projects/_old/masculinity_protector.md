@@ -1,10 +1,12 @@
----
+<!--
 title: "masculinty protector"
 date: "2017-02-01T00:00:00+00:00"
 display: false
 image: "img/portfolio/masc.png"
 weight: 0
----
+-->
+
+# Masculinity Protector
 
 Satirical web app created to "protect" men when they listen to music that's often considered "femenine".
 <!--more-->

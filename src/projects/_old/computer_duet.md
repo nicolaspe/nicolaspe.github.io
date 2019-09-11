@@ -1,10 +1,12 @@
----
+<!--
 title: "Computer Duet"
 date: "2017-10-14T00:00:00+00:00"
 display: false
 image: "img/portfolio/comp_duet.png"
 weight: 0
----
+-->
+
+# Computer Duet
 
 A performance between the user and a socially-engaged dirty computer.
 <!--more-->

@@ -1,10 +1,12 @@
----
+<!--
 title: "Collected Ego"
 date: "2018-11-30"
 display: true
 image: "img/portfolio/collectedego.jpg"
 weight: 1
----
+-->
+
+# Collected Ego
 
 A large scale audiovisual short about finding balance between self-discovery while relating to society.<!--more-->
 Made in collaboration with [Annabel Mutale Reed](https://twitter.com/bellamutale), [Jack Trzcinski](https://twitter.com/JackTrzcinski), and [Jarone Wright](http://jarone.net/).

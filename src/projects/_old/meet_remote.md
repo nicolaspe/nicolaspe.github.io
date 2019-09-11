@@ -1,10 +1,12 @@
----
+<!--
 title: "m e e t_ re_mote"
 date: "2018-03-11T00:00:00+00:00"
 display: false
 image: "img/portfolio/meet_r_logo.jpg"
 weight: 0
----
+-->
+
+# m e e t_ re_mote
 
 What happens if the physical encounter of two bodies is replaced by a virtual encounter in mid-air between two gazes?
 <!--more-->

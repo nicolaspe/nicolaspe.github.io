@@ -1,10 +1,12 @@
----
+<!--
 title: "Wireless Bijective FX"
 date: "2013-12-11T00:00:00+00:00"
 display: false
 image: "img/portfolio/wbfx_diagram.png"
 weight: 0
----
+-->
+
+# Wireless Bijective FX
 
 Software based bijective multiple effects processor and hardware based wireless controller for live performances.
 <!--more-->

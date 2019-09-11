@@ -1,10 +1,12 @@
----
+<!--
 title: "Coalition"
 date:  "2018-12-15"
 display: true
 image: "img/portfolio/coalition.png"
 weight: 1
----
+-->
+
+# Coalition
 
 A motion-based interactive experience about diversity in an oppressive society. <!--more-->
 Made in collaboration with [Ridwan Madon](https://www.ridwanmadon.com/), [Xiaowei Lu](https://wp.nyu.edu/llllllxw/author/xl2334/) and [Yibing Qian](http://yibingqian.org/).

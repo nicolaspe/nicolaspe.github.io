@@ -1,10 +1,12 @@
----
+<!--
 title: "Inner Cadence"
 date:  "2019-04-25"
 display: true
 image: "img/portfolio/innercadence.png"
 weight: 1
----
+-->
+
+# Inner Cadence
 
 An interactive video wall that captures and amplifies people’s characteristic movements, enhancing motion as a form of expression.<!--more-->
 
@@ -15,7 +17,7 @@ An interactive video wall that captures and amplifies people’s characteristic 
 Over the past year I have been exploring the idea of movement as a form of expression that’s inherently linked to our identity. It conveys individuality and emotion: we can be identified by our gait, or infer someone’s mood by their pose. I want to maximize this expressiveness potential and explore ways of enhancing people’s movements. I want to foreground motion by separating it from the body, silhouette, features, or clothes, making people rethink how they build their identity and their relation to others.
 
 
-<div style="display: flex;">
+<div class="vid_sm" style="display: flex;">
 	<figure class="vid_container vid_720x2" style="text-align: center">
         <video src="http://nicolaspe.com/vids/innercad_04a.webm" class="vid_doc" autoplay loop width="40%" />
     </figure>

@@ -1,10 +1,12 @@
----
+<!--
 title: "Creative Coding"
 date: "2017-05-11T00:00:00+00:00"
 display: false
 image: "img/portfolio/cve.png"
 weight: 0
----
+-->
+
+# Creative Coding Experiments
 
 Compilation of creative coding small projects and experiments
 <!--more-->

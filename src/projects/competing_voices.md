@@ -1,10 +1,12 @@
----
+<!--
 title: "Competing Voices"
 date: "2018-05-13"
 display: true
 image: "img/portfolio/competing_voices.jpg"
 weight: 1
----
+-->
+
+# Competing Voices
 
 An algorithmic musical performance piece about internal conflict and clashing personalities.
 <!--more-->

@@ -1,10 +1,12 @@
----
+<!--
 title: "Extra"
 date: "2017-11-01"
 display: true
 image: "img/portfolio/extra.jpg"
 weight: 1
----
+-->
+
+# Extra
 
 Extra is an interactive conceptual exhibition piece. It combines a newspaper with sensors and projection mapping of news media to generate a reflection about media bombardment and the role of information.
 <!--more-->

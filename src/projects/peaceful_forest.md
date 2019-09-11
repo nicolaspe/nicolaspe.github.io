@@ -1,10 +1,12 @@
----
+<!--
 title: "Peaceful Forest / Dark Halls"
 date: "2018-02-28"
 display: true
 image: "img/portfolio/peacef_logo.png"
 weight: 0
----
+-->
+
+# Peaceful Forest / Dark Halls
 
 A set of two VR experimental experiences aimed to explore user's intuitive interactions and their sensorial reactions to diverse and contradicting audiovisual stimuli. <!--more--> 
 

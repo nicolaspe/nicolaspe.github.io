@@ -1,10 +1,12 @@
----
+<!--
 title: "Animation"
 date: "2017-12-02T00:00:00+00:00"
 display: false
 image: "img/portfolio/animation.png"
 weight: 2
----
+-->
+
+# Animation
 
 Audiovisual storytelling experiments in different technologies.
 <!--more-->

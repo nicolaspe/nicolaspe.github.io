@@ -1,10 +1,12 @@
----
+<!--
 title: "Barranco"
 date: "2015-01-01T00:00:00+00:00"
 display:  false
 image: "img/portfolio/barranco.jpg"
 weight: 0
----
+-->
+
+# Barranco
 
 Chilean based music project active between 2013 and 2015. Their work was inspired by the exploration of delayed guitars rock sounds.
 <!--more-->

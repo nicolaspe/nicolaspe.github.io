@@ -1,10 +1,12 @@
----
+<!--
 title: "Mesh Media"
 date: "2018-01-20T00:00:00+00:00"
 display: false
 image: ""
 weight: 0
----
+-->
+
+# Mesh Media
 
 As Net Neutrality fades away, *Mesh Media* was created as an independent offline networked platform for creators to distribute their own content, unfiltered by ISP inspection and possible blocking.
 <!--more-->

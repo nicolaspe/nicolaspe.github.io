@@ -1,10 +1,12 @@
----
+<!--
 title: "Me as myself"
 date: "2018-10-12"
 display: true
 image: "img/portfolio/memyself.jpg"
 weight: 1
----
+-->
+
+# Me as myself
 
 An exhibition that explores different representations of my persona, trying to uncover who’s the person behind.
 <!--more-->
