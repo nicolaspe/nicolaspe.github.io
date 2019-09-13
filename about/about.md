@@ -2,9 +2,11 @@
 
 Nicolás Escarpentier is a non-binary *immersive media artist/technologist* from Santiago, Chile. They focus on creating experiences that augment and create non-conventional forms of expression with far-reaching impact. By mixing diverse emerging technologies, their works push the state of the art on experiential storytelling.
 
-![Profile picture](./npe_bw.jpg)
+<figure class="profile">
+    <img style="width: 100%;" src="./npe_bw.jpg" alt="Profile picture">
+</figure>
 
-Nicolás has a M.P.S. degree from [NYU’s Interactive Telecommunications Program](https://tisch.nyu.edu/itp) and is board member at the [activist co-op, Unglitch](http://unglitchthe.net/).
+Nicolás has a M.P.S. degree from NYU’s [Interactive Telecommunications Program](https://tisch.nyu.edu/itp) and is a board member at the [activist co-op, Unglitch](http://unglitchthe.net/).
 
 <br>
 
@@ -20,3 +22,12 @@ Nicolás has a M.P.S. degree from [NYU’s Interactive Telecommunications Progra
 - **[ISSUE Project Room](https://issueprojectroom.org/)**, 2018 - [Performance showcase](http://nicolaspe.com/portfolio/competing_voices)
 - **[NYC Media Lab](https://nycmedialab.org/)**, 2018 - Installation showcase
 - **[World Maker Faire NY](https://makerfaire.com/new-york/)**, 2018 - [Project](http://nicolaspe.com/portfolio/rythmic_skin) showcase
+
+## find me here
+
+<div class="social_media">
+    <a href="https://github.com/nicolaspe/"> <img src="./GitHub-Mark-120px-plus.png" width="20px" alt="GitHub logo"> </a>
+    <a href="http://instagram.com/nico_p90/"> <img src="./glyph-logo_May2016.png" width="20px" alt="Instagram logo"> </a>
+    <a href="https://vimeo.com/nicolaspe"> <img src="./vimeo_icon_dark.png" width="20px" alt="Vimeo logo"> </a>
+
+</div>

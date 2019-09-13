@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
@@ -44,7 +44,7 @@ nav a {
   padding-left: 30px;
 }
 footer {
-  font-family: "Lato", Verdana, Arial, sans-serif;
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-weight: lighter;
   font-size: 0.6em;
   font-style: italic;
@@ -65,7 +65,8 @@ section {
   margin-top: 50px;
 }
 main {
-  font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif;
+  /* font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif; */
+  font-family: "Roboto", Helvetica, Verdana, Arial, sans-serif;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -74,7 +75,7 @@ main {
 }
 main p {
   width: 45%;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   line-height: 150%;
   display: inline-block;
 }
@@ -109,9 +110,25 @@ figcaption {
   font-size: 0.75em;
 }
 
+.profile {
+  /* display: inline-block; */
+  float: right;
+  width: 45%;
+  margin: 0px;
+  padding: 0px;
+}
+.profile img {
+  width: 100%;
+}
 
-img {
-    /* display: inline-block; */
-    float: right;
-    width: 45%;
+.social_media {
+  display: flex;
+  justify-content: flex-start;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social_media img {
+  width: 2.5em;
+  margin: 10px;
 }

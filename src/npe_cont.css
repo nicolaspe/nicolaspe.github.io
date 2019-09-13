@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
@@ -57,7 +57,7 @@ nav a {
   padding-left: 30px;
 }
 footer {
-  font-family: "Lato", Verdana, Arial, sans-serif;
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-weight: lighter;
   font-size: 0.6em;
   font-style: italic;
@@ -79,7 +79,8 @@ section {
   margin-top: 50px;
 }
 main {
-  font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif;
+  /* font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif; */
+  font-family: "Roboto", Helvetica, Verdana, Arial, sans-serif;
   font-weight: lighter;
   color: rgb(78,49,102);
 }
@@ -88,7 +89,7 @@ main p {
   margin-left: auto;
   margin-right: auto;
   /* display: inline-block; */
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   line-height: 150%;
 }
 main a{
@@ -105,9 +106,13 @@ main a:hover {
 }
 blockquote {
   font-style: italic;
-  border-left: 2px solid #dfdfdf;
+  font-size: 1em;
+  border-left: 2px solid rgb(98,69,122);
   padding-left: 4px;
-  color: #dfdfdf;
+  color: rgb(98,69,122);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .vid_doc {
@@ -125,15 +130,40 @@ main li{
   padding: 5px 0px 15px 0px;
 }
 
+/* == IMAGES == */
+img {
+  width: 100%;
+}
+.proj_img_full{
+  width: 100%;
+  margin: 0;
+}
+.proj_img_center{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_tall{
+  width: 50%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_sm{
+  width: 40%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
 figcaption {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-size: 0.75em;
 }
 
 /* == VIDEOS == */
 .vid_container {
   position: relative;
-  /* max-width: 700px; */
+  /* width: 100%; */
   height: 0;
   overflow: hidden;
   text-align: center;
@@ -149,9 +179,10 @@ figcaption {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 120%;
+	width: 100%;
 	height: 100%;
 }
+
 .vid_16x9 {
 	padding-bottom: 56.25%;
 }
@@ -169,6 +200,13 @@ figcaption {
 }
 .vid_1x1 {
 	padding-bottom: 50%;
+}
+
+.vid_ext {
+  width: 90%;
+  padding-bottom: 50.625%;
+  margin-top:    2em;
+  margin-bottom: 2em;
 }
 
 .col_50{

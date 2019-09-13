@@ -6,5 +6,5 @@ Personal website
 
 Install [Markdown To Document](https://github.com/GaelGirodon/markdown-to-document) and:
 
-- For *projects*, go to `portfolio/<project>` and run `mdtodoc -l "../../template.html" *.md`
-- For *about*, on the main folder run `mdtodoc -l "./template_about.html" about.md`
+- For *projects*, on the `portfolio/<project>`, run `mdtodoc -l "../../template.html" -e "none" *.md`
+- For *about*, on the `about` folder, run `mdtodoc -l "../template_about.html" -e "none" *.md`

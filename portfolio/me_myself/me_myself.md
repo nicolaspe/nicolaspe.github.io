@@ -11,7 +11,7 @@ weight: 1
 An exhibition that explores different representations of my persona, trying to uncover who’s the person behind.
 <!--more-->
 
-<figure style="text-align: center">
+<figure class="proj_img proj_img_full" style="text-align: center">
   <img class="p_detail" src="./memyself_exhibition.jpg" alt="Exhibition">
 </figure>
 
@@ -21,7 +21,7 @@ Our self image in this Internet era is a very curated and carefully constructed 
 
 Me as myself is an exhibition that showcases an exploration of different parts of my persona. It offers a reflection on the importance of having a visual representation of your being, while trying to embody my vulnerabilities and the difficulties it brings.
 
-<figure style="text-align: center">
+<figure class="proj_img proj_img_center" style="text-align: center">
 	<img class="p_detail" src="./memyself_avatars.jpg" alt="Avatars of my persona">
   <figcaption>Example of two avatars representing different aspects of myself</figcaption>
 </figure>
@@ -35,7 +35,7 @@ These facets are presented to the audience accompanied by a narrated paragraph, 
 
 Finally, I also presented my physical body as counterpoint to these creations, but questioning the accuracy of it over the previous ones. Besides the fact that I'm "stuck" in it, is it any more valid than any other creation I could choose to represent myself?
 
-<figure style="text-align: center">
+<figure class="proj_img proj_img_sm" style="text-align: center">
 	<img class="p_detail" src="./memyself_fail.jpg" alt="Model failures">
   <figcaption>Some failed texture mappings of different models</figcaption>
 </figure>

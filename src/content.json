@@ -1,6 +1,6 @@
 {
   "menu": ["work", "about"],
-  "work": [
+  "portfolio": [
     {
       "name": "inner cadence",
       "slug": "inner_cadence",
@@ -23,7 +23,7 @@
     },
     {
       "name": "me as myself",
-      "slug": "memyself",
+      "slug": "me_myself",
       "display": 1
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "name": "everyday windows",
-      "slug": "everydaywindows",
+      "slug": "everyday_windows",
       "display": 1
     },
     {

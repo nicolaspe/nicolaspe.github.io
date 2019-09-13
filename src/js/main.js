@@ -57,7 +57,7 @@ function loadProjects(){
   $.getJSON("./src/content.json", function(json){
     proj_data = json;
 
-    proj_data["work"].forEach(proj => {
+    proj_data["portfolio"].forEach(proj => {
       if(proj["display"] != 0){
         // get project names and slugs
         let p_name = proj["name"];
@@ -72,6 +72,8 @@ function loadProjects(){
         item_link.href = "/portfolio/" + p_slug + "/";
         item_link.onmouseover = projectOnHover; 
         item_link.onmouseout  = projectOnLeave;
+        // console.log("\t> project: " + p_name + " - " + p_slug);
+        // console.log("\t> link: " + item_link.href);
         // append link and element
         item_elem.appendChild( item_link );
         list.appendChild( item_elem );
