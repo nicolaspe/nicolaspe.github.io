@@ -1,12 +1,13 @@
 # About me
 
-Nicolás Escarpentier is a non-binary *immersive media artist/technologist* from Santiago, Chile. They focus on creating experiences that augment and create non-conventional forms of expression with far-reaching impact. By mixing diverse emerging technologies, their works push the state of the art on experiential storytelling.
+Nicolás Escarpentier is a non-binary *immersive media artist/technologist* from Santiago, Chile. Specialized in VR/AR and large-scale interactive installations, they focus on identifying opportunities across emerging technologies to project-specific solutions. Their projects aim to augment and create non-conventional forms of expression with far-reaching impact, pushing the state of the art on experiential storytelling. 
+<!-- Nicolás has excellent project managment and team leadership skills and extensive client-facing experience -->
 
 <figure class="profile">
     <img style="width: 100%;" src="./npe_bw.jpg" alt="Profile picture">
 </figure>
 
-Nicolás has a M.P.S. degree from NYU’s [Interactive Telecommunications Program](https://tisch.nyu.edu/itp) and is a board member at the [activist co-op, Unglitch](http://unglitchthe.net/).
+Nicolás has a M.P.S. degree from NYU’s [Interactive Telecommunications Program](https://tisch.nyu.edu/itp), and is part of the [Positive Null collective] and the [activist co-op, Unglitch](http://unglitchthe.net/).
 
 <br>
 

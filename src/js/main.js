@@ -213,7 +213,8 @@ function loadVideos(){
   // CHECK FOR FORMAT
   v = document.createElement( 'video' );
   if(v.canPlayType && v.canPlayType('video/webm').replace(/no/, '')) { file_ext = ".webm"; }
-  else { file_ext = ".mp4"; }
+  else if (v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) { file_ext = ".mp4"; }
+  else { file_ext = ".webm"; }
 
 
   // ARRAY INIT
