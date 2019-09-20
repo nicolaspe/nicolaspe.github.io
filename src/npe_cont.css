@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
@@ -71,6 +72,16 @@ h1, h2, h3 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  /* color: rgb(58,39,82); */
+  color: rgb(42, 34, 46);
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+  font-variant: all-small-caps;
+  margin-bottom: 0;
 }
 .title a:hover {
   font-style: none;
@@ -80,8 +91,8 @@ section {
 }
 main {
   /* font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif; */
-  font-family: "Roboto", Helvetica, Verdana, Arial, sans-serif;
-  font-weight: lighter;
+  font-family: "Lato", Helvetica, Verdana, Arial, sans-serif;
+  /* font-weight: lighter; */
   color: rgb(78,49,102);
 }
 main p {
@@ -89,11 +100,16 @@ main p {
   margin-left: auto;
   margin-right: auto;
   /* display: inline-block; */
-  /* font-size: 1.2em; */
-  line-height: 150%;
+  font-size: 1.1rem;
+  line-height: 170%;
+}
+main .sideR{
+  width: 45%;
+  display: inline-block;
 }
 main a{
-  font-style: italic;
+  font-style: normal;
+  text-decoration: underline;
 }
 main a:hover {
   font-style: normal;
@@ -130,6 +146,26 @@ main li{
   padding: 5px 0px 15px 0px;
 }
 
+main mark {
+  font-size: 1.5em;
+  background-color: inherit;
+}
+
+.line-group {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.line-group > p {
+  margin: 0;
+  width: 50%;
+}
+
 /* == IMAGES == */
 img {
   width: 100%;
@@ -155,9 +191,30 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.proj_img_sideL{
+  min-width: 250px;
+  width: 40%;
+  float: left;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.proj_img_sideR{
+  min-width: 250px;
+  width: 40%;
+  float: left;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 figcaption {
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-size: 0.75em;
+  text-align: center;
+  margin-bottom: 2em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* == VIDEOS == */
@@ -190,7 +247,8 @@ figcaption {
   padding-bottom: 45.90%;
 }
 .vid_720x2 {
-  padding-bottom: 29%;
+  padding-bottom: 28%;
+  margin-bottom: 0.5em;
 }
 .vid_720_full {
   padding-bottom: 56.20%;
@@ -198,8 +256,14 @@ figcaption {
 .vid_4x3 {
 	padding-bottom: 75%;
 }
-.vid_1x1 {
+.vid_sq {
 	padding-bottom: 50%;
+}
+.vid_side {
+  width: 45%;
+  /* padding-bottom: 22%; */
+  margin: 0;
+  margin-bottom: 0.5em;
 }
 
 .vid_ext {

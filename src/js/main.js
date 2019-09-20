@@ -3,7 +3,7 @@ let container, renderer, camera, scene;
 let controls, loader, timekeep;
 let d_light1, d_light2;
 let surface, surf_mat;
-let proj_data, proj_slugs;
+let proj_data, proj_slugs, proj_desc, proj_tags;
 let videos, vids_img, vids_cnt, vids_tex, vids_mat;
 let vid_wid, vid_hei;
 let curr_vid, bVideosLoaded, bPlaying;
@@ -51,6 +51,8 @@ function init(){
 // === LOAD PROJECT DATA
 function loadProjects(){
   proj_slugs = [];
+  proj_desc  = [];
+  proj_tags  = [];
 
   let list = document.createElement( 'ul' );
 
@@ -80,6 +82,8 @@ function loadProjects(){
 
         // add data to the list
         proj_slugs.push( p_slug );
+        proj_desc[p_slug] = proj["desc"];
+        proj_tags[p_slug] = proj["tags"];
       }
     });
 
@@ -126,14 +130,23 @@ function onKeyPress( event ) {
 }
 function projectOnHover( event ){
   if( proj_slugs.indexOf(event.target.id) >= 0 ){ 
+    // get corresponding ID
     curr_vid = event.target.id;
+    // update video on background
     bPlaying = true;
     updateVideoState();
+    // update text fields
+    $("#proj_detail_desc")[0].innerText = proj_desc[curr_vid];
+    $("#proj_detail_tags")[0].innerText = proj_tags[curr_vid];
   }
 }
 function projectOnLeave(){
+  // update background material
   bPlaying = false;
   updateVideoState();
+  // update text fields
+  $("#proj_detail_desc")[0].innerText = "";
+  $("#proj_detail_tags")[0].innerText = "";
 }
 
 

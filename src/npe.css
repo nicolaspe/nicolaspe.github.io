@@ -110,6 +110,26 @@ figcaption {
   font-size: 0.75em;
 }
 
+.project_details {
+  position: absolute;
+  bottom: 5em;
+  right:  10%;
+  color: white;
+  text-align: right;
+  width: 50%;
+  height: 3em;
+  margin: 0;
+}
+#proj_detail_desc {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 0.5em;
+}
+#proj_detail_tags {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0.5em;
+}
 
 .about_cont {
   display: inline-block;

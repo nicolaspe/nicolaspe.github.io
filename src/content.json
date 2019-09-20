@@ -2,78 +2,122 @@
   "menu": ["work", "about"],
   "portfolio": [
     {
+      "name": "heart of a survivor",
+      "slug": "heart_survivor",
+      "desc": "Life-based interactive VR journey",
+      "tags": "#UnrealEngine #VR #DepthKit #Maya #Photogrammetry",
+      "display": 0
+    },
+    {
+      "name": "disjointed realities",
+      "slug": "disjointed_realities",
+      "desc": "",
+      "tags": "#",
+      "display": 0
+    },
+    {
       "name": "inner cadence",
       "slug": "inner_cadence",
+      "desc": "Interactive video-wall installation",
+      "tags": "#UnrealEngine #Kinect #OpenFrameworks #Python #MotionCapture",
+      "display": 1
+    },
+    {
+      "name": "automorphic",
+      "slug": "automorphic",
+      "desc": "Interactive architectural installation",
+      "tags": "#OpenFrameworks #OpenGL #Python #ProjectionMapping #3dModeling #Maya",
+      "display": 0
+    },
+    {
+      "name": "collected ego",
+      "slug": "collected_ego",
+      "desc": "Large-scale audiovisual short",
+      "tags": "#UnrealEngine #MotionCapture #AfterEffects",
       "display": 1
     },
     {
       "name": "coalition",
       "slug": "coalition",
+      "desc": "Multi-user interactive installation",
+      "tags": "#UnrealEngine #MotionCapture #MaxMSP #PhysicalComputing #ProjectionMapping",
       "display": 1
-    },
-    {
-      "name": "collected ego",
-      "slug": "collected_ego",
-      "display": 1
-    },
-    {
-      "name": "lost realities",
-      "slug": "lost_realities",
-      "display": 0
     },
     {
       "name": "me as myself",
       "slug": "me_myself",
-      "display": 1
+      "desc": "",
+      "tags": "#",
+      "display": 0
     },
     {
       "name": "competing voices",
       "slug": "competing_voices",
+      "desc": "Audiovisual computer-aided performance",
+      "tags": "#MaxMSP #OpenGL",
       "display": 1
     },
     {
       "name": "rhythmic skin",
       "slug": "rhythmic_skin",
-      "display": 1
-    },
-    {
-      "name": "everyday windows",
-      "slug": "everyday_windows",
-      "display": 1
-    },
-    {
-      "name": "extra",
-      "slug": "extra",
+      "desc": "Musical haptic wearable",
+      "tags": "#Arduino #Haptics #MIDI #Wearable",
       "display": 1
     },
     {
       "name": "peaceful forest",
       "slug": "peaceful_forest",
+      "desc": "Exploratory VR piece",
+      "tags": "#UnrealEngine #VR #Maya",
       "display": 1
+    },
+    {
+      "name": "everyday windows",
+      "slug": "everyday_windows",
+      "desc": "Interactive WebVR installation",
+      "tags": "#Arduino #IoT #WebVR #Node.js",
+      "display": 1
+    },
+    {
+      "name": "extra",
+      "slug": "extra",
+      "desc": "",
+      "tags": "#",
+      "display": 0
     },
     {
       "name": "mesh media",
       "slug": "meshmedia",
+      "desc": "",
+      "tags": "#",
       "display": 0
     },
     {
       "name": "m e e t_  re_mote",
       "slug": "meet_remote",
+      "desc": "",
+      "tags": "#",
       "display": 0
     },
     {
       "name": "computer duet",
       "slug": "comp_duet",
+      "desc": "",
+      "tags": "#",
       "display": 0
     },
     {
       "name": "barranco",
       "slug": "barranco",
+      "desc": "",
+      "tags": "#",
       "display": 0
     },
     {
       "name": "creative coding",
       "slug": "creative_coding",
+      "desc": "",
+      "tags": "#",
       "display": 0
     }
   ]
