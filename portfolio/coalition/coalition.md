@@ -44,4 +44,5 @@ Coalition aims to instigate a reflection on this issue by letting users explore 
 
 <br/>
 <br/>
+
 <a href="#" onClick="history.go(-1);return true;">Go Back</a>
