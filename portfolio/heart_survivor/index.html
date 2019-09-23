@@ -22,7 +22,7 @@
 
         <main> 
 <h1>Heart of a Survivor</h1>
-<p>Heart of a Survivor (working title) is the prototype for an unreleased festival-bound virtual reality experience, that takes the audience through a journey of loss, love and hope: the biographical story of a genocide survivor.</p>
+<p>Heart of a Survivor (working title) is the prototype for an unreleased festival-bound virtual reality experience, that takes the audience through a story of loss, love and hope: a journey through the heart of a genocide survivor.</p>
 <p><code>As this is a yet-unreleased piece, I will not disclose specific details about the piece, instead focusing on the creative and technical journey.</code></p>
 <figure class="proj_img proj_img_full" style="text-align:center">
 	<img class="p_capture" src="./media/stayalive.png" alt="Heart Survivor, prototype scene">
@@ -38,8 +38,19 @@
   <figcaption>Ideation session timelapse - edited by Gabriel Brasil</figcaption>
 </div>
 </div>
-<p>The script was thoroughly dissected and analyzed from several points of view: story beats and narrative structure, user placement and interaction possiblilities, technical elements and how they play along in VR, scene composition, and more. As an emotional and impactful story, all had to play in favor of a strong sense of embodiment, using the user’s presence as a narrative tool.</p>
-<p>At the same time, this was not meant to be a simulator or to replicate reality. Going through such memories gives us the chance of imprinting their emotional weight on the environment, ultimately directing the art-style. All these elements were then presented to the director, presenting her with options and feedback, and starting a collaborative iteration in order to accomplish her view.</p>
+<p>The script was thoroughly dissected and analyzed from several points of view: story beats and narrative structure, user placement and interaction possiblilities, technical elements and how they play along in VR, scene composition, and more. All these elements were then submitted to the director, presenting her with options and feedback, and starting a collaborative iteration in order to accomplish her view.</p>
+<br>
+<div class="line-group">
+<p>The memories are recounted inside the metaphorical heart of the main character. The user embodies his presence in the memories, making them a key narrative tool. And as it’s not trying to replicate reality, the art direction reflected this from the beginning.</p>
+<figure class="proj_img proj_img_sideR" style="text-align:center">
+    <img class="p_detail" src="./media/hs_heart00.jpg" alt="Concept drawing of the heart environment housing one of the memories">
+</figure>
+</div>
+<figure class="proj_img proj_img_full" style="text-align:center;display:block">
+	<img class="p_detail" style="width:49.8%" src="./media/hs_heart02.jpg" alt="3d heart environment with template objects">
+  <img class="p_detail" style="width:49.8%" src="./media/hs_heart03.jpg" alt="Wide shot of the 3d heart environment">
+  <figcaption>3d heart environment that houses the entire experience</figcaption>
+</figure>
 <h2 id="designing-interactions">Designing interactions</h2>
 <p>As an inherently immersive medium, the realm of possibilities of user interactions in VR has to be aligned with the idea of embodiment. As such, they have to be carefully designed. The interactions have to be unobtrussive and transparent, as a mechanic cannot take the user out of the experience.</p>
 <p>This can be achieved in two ways. First, we can take advantage of movements that come natural to us, such as grabbing or reaching out to things. Or second, we can incorporate one new action in the beginning of the experience, reinforcing it over the first minutes, so that it becomes natural for the audience and they don’t have to actively think to perform it.</p>
@@ -50,9 +61,13 @@
 </figure>
 <figcaption>Reaching out for a memory object activates the scene</figcaption>
 <h2 id="animatics">Animatics</h2>
-<p>After designing the interactions, laying out the scenes via storyboarding and with the script in a good state, we moved forward to 2d animatics</p>
+<p>After designing the interactions, laying out the storyboards and with the script in a good state, we needed to prototype the current state to move forward. We recorded ourselves as scratch track and animated the 2d boards, and later a basic VR 3d blocking. Even with stock assets and minimal animations, we were able to get a feel of the pace, interactions and story inside the headset.</p>
+<figure class="vid_container vid_720" style="text-align:center">
+  <iframe src="https://player.vimeo.com/video/358558909" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</figure>
+<figcaption>View of 2d, 3d and volumetric animatics done with Gabriel Brasil</figcaption>
 <h2 id="exploring-pipelines-for-volumetric-technologies">Exploring pipelines for volumetric technologies</h2>
-<p>Early on in the process, it became evident that such a powerful and intimate story needed specialized elements to create a deep human connection. And even though motion capture and asset creation have come a long way, the subtleties of human microgestures are immensely difficult to replicate. Thus, we looked at different volumetric capture technologies, testing their assets and trying to manipulate them to out target look.</p>
+<p>Early on in the process, it became evident that such a powerful and intimate story needed specialized elements to create a deep human connection. To replicate the subtleties of human microgestures, something standard motion capture cannot convey, we looked at volumetric capture technologies.</p>
 
 <br>
 <div class="line-group">
@@ -65,14 +80,14 @@
 </figure>
 <figcaption style="margin-bottom:0">Test of a volumetric asset by 4DSViews with custom shaders materials to achieve a dreamy feel</figcaption>
 </div>
-<p>First, we tested two different products from full 3d volumetric capture studios: <a href="https://www.4dviews.com/">4DSViews’ Holosys</a> and the <a href="https://www.microsoft.com/en-us/mixed-reality/capture-studios">Microsoft’s Mixed Reality Capture Studio (MRCS)</a>. Despite achieving decent results in a short time, the degree of manipulation, reliability or costs of these solutions meant that we could not work with them. But they gave us a great view into the landscape of 3d volumetric capture and the possibilities it offers.</p>
+<p>First, we tested two different products from full 3d volumetric capture studios: <a href="https://www.4dviews.com/">4DSViews’ Holosys</a> and the <a href="https://www.microsoft.com/en-us/mixed-reality/capture-studios">Microsoft’s Mixed Reality Capture Studio (MRCS)</a>. Despite achieving decent results in a short time, the degree of manipulation, reliability and costs of these solutions meant that we could not work with them.</p>
 </div>
 
 <h3 id="depthkit-in-unrealeninge">DepthKit in UnrealEninge</h3>
-<p>Finally, we moved to <a href="https://www.depthkit.tv/">DepthKit</a>, a fantastic 2.5d solution for volumetric capture. DepthKit has an existing plugin for Unity but there’s not such a thing for Unreal Engine, so the first step was come up with a pipeline to import it reliably. It involved exporting the recordings as an OBJ sequence, importing them into Maya <a href="https://www.highend3d.com/maya/script/obj-i-o-obj-sequences-import-export-for-maya">with a plugin</a>, scaling, and rotating if needed, and exporting as an <em>alembic cache</em>. This proved to be effective, but the textures kept desynchronizing with the geometry cache. To solve it, I used <em>ffmpeg</em> to batch downscale the images and use the level sequencer to manipulate their playback.</p>
+<p>Then, we moved to <a href="https://www.depthkit.tv/">DepthKit</a>, a fantastic 2.5d solution for volumetric capture. As there’s no plugin for Unreal Engine, the first step was come up with a proper pipeline. The exported OBJ sequence was imported into Maya <a href="https://www.highend3d.com/maya/script/obj-i-o-obj-sequences-import-export-for-maya">with a special plugin</a>, and re-exported as an <em>alembic cache</em>. This proved to be effective, but the textures kept desynchronizing with the geometry cache. To solve it, I used <em>ffmpeg</em> to batch downscale the images and used the level sequencer to manipulate their playback.</p>
 
 <div class="line-group">
-<p>After managing to get the technology working, I started experimenting with mixed alternatives. As DepthKit only captures 2.5d, there are many considerations at the moment of filming not to break the user’s immersion. As a body’s performance can be replicated thanks to motion capture, the facial performance is harder to import without highly expensive tech. But a way to circumvent this issue is by capturing the actor’s face with DepthKit, and transplanting their face into a 3d model. This alembic cache is then parented to the head bone of the asset and can be easily swapped both in blueprint and level sequencer.</p>
+<p>After getting the technology to work, I experimented with mixed alternatives. As a body’s performance can be replicated thanks to motion capture and DepthKit can capture the subtelties of facial performances, I combined both to leverage their strengths and cover their weaknesses: a virtual face transplant.</p>
 <div class="vid_side" style="text-align:center">
   <figure style="margin:0">
     <video class="vid_doc" autoplay loop muted>
@@ -80,7 +95,7 @@
         <source src="./media/DK_face.mp4" type="video/mp4">
     
 </figure>
-  <figcaption>Exploring possibilities: transplanting a facial performance into a 3d body</figcaption>
+  <figcaption>Exploring possibilities: transplanting a volumetric facial performance into a 3d body</figcaption>
 </div>
 </div>
 <h2 id="creating-prototypes">Creating prototypes</h2>
