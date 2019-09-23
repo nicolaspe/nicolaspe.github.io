@@ -36,11 +36,11 @@ The script was thoroughly dissected and analyzed from several points of view: st
 <br>
 <div class="line-group">
 
-The memories are recounted inside the metaphorical heart of the main character. The user embodies his presence in the memories, making them a key narrative tool. And as it's not trying to replicate reality, the art direction reflected this from the beginning.
-
 <figure class="proj_img proj_img_sideR" style="text-align: center">
     <img class="p_detail" src="./media/hs_heart00.jpg" alt="Concept drawing of the heart environment housing one of the memories">
 </figure>
+
+The memories are recounted inside the metaphorical heart of the main character. The user embodies his presence in the memories, making them a key narrative tool. And as it's not trying to replicate reality, the art direction reflected this from the beginning.
 
 </div>
 
@@ -63,7 +63,7 @@ This can be achieved in two ways. First, we can take advantage of movements that
 </figure>
 <figcaption>Reaching out for a memory object activates the scene</figcaption>
 
-## Animatics
+## Animatics & 360 shooting
 
 After designing the interactions, laying out the storyboards and with the script in a good state, we needed to prototype the current state to move forward. We recorded ourselves as scratch track and animated the 2d boards, and later a basic VR 3d blocking. Even with stock assets and minimal animations, we were able to get a feel of the pace, interactions and story inside the headset.
 
@@ -71,6 +71,18 @@ After designing the interactions, laying out the storyboards and with the script
   <iframe src="https://player.vimeo.com/video/358558909"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <figcaption>View of 2d, 3d and volumetric animatics done with Gabriel Brasil</figcaption>
+
+<!-- 360 shooting -->
+<br>
+<div class="line-group">
+
+With the need to better understand and lock the motion script, we were joined by [Chris Hall](https://www.chrissyelie.com/) to do a 360 shooting with professional actors. We played out the entire script, keeping track of motion and distance to the camera - an Insta 360, which let us quickly review the material on an Oculus Go.
+
+<figure class="proj_img proj_img_sideR" style="text-align: center">
+    <img class="p_detail" src="./media/hs_360.jpg" alt="360 shooting day - photo by Gabriel Brasil">
+</figure>
+
+</div>
 
 ## Exploring pipelines for volumetric technologies
 
@@ -118,18 +130,52 @@ After getting the technology to work, I experimented with mixed alternatives. As
 
 </div>
 
+<figure class="proj_img proj_img_full" style="text-align: center;">
+  <img class="p_detail" style="width:98%;" src="./media/dk_studio01.jpg" alt="Team at Sensorium's DepthKit studio @ RLab">
+  <br>
+  <img class="p_detail" style="width:49%;" src="./media/dk_studio02.jpg" alt="DepthKit recording at Sensorium's studio @ RLab"> 
+	<img class="p_detail" style="width:49%;" src="./media/dk_screen.jpg" alt="DepthKit recording screen">
+  <figcaption>DepthKit recording at Sensorium's studio @ RLab</figcaption>
+</figure>
+
 ## Creating prototypes
 
+Finally, after getting the different pieces to work together, it was time to build a prototype of the entire experience. Each scene was created in it's own level, as was the heart that acted as a hub between them. All of them were loaded on a persistent level, with a level sequencer controlling the visibility and playback of each individual scene.
+
+<br>
+<figure class="vid_container vid_sq" style="text-align: center">
+    <video class="vid_doc" controls>
+        <source src="./media/hs_demo01.mp4"  type="video/mp4">
+        <source src="./media/hs_demo01.webm" type="video/webm">
+    </video>
+</figure>
+<figure class="vid_container vid_sq" style="text-align: center">
+    <video class="vid_doc" controls>
+        <source src="./media/hs_demo02.mp4"  type="video/mp4">
+        <source src="./media/hs_demo02.webm" type="video/webm">
+    </video>
+</figure>
+<figcaption>Prototypes of two scenes, incorporating interaction and volumetric assets</figcaption>
+
+<figure class="proj_img proj_img_full" style="text-align: center;">
+  <img class="p_detail" src="./media/hs_jungle.jpg" alt="Prototype jungle scene"> 
+<figcaption>Prototype of the jungle scene, combining 3d and point cloud assets</figcaption>
+</figure>
 
 ## Acknowledgements
 
-I would like to thank to all the amazing people I worked with:
+I would like to thank to all the amazing people I worked with and helped develop this project. Going through this process has granted me a deeper insight into the affordances of VR and the different tools and pipelines that are yet to be created for it.
 
-- Victoria Bousis, Director and writer
-- [Gabriel Brasil](https://www.ejectnow.com/), co-worker and
+- Victoria Bousis, director and writer
+- [Gabriel Brasil](https://www.ejectnow.com/)
 - [Todd Bryant](https://toddjbryant.com/) and the [RLab](https://www.rlab.nyc/)
 - Matthew Niederhauser and John Fitzgerald, [Sensorium](https://www.sensorium.works/)
 - [Chris Hall](https://www.chrissyelie.com/)
-- Misha Zabranska
+- [Misha Zabranska](http://mishazv.com/bio/)
+
+<figure class="proj_img proj_img_full" style="text-align: center;">
+  <img class="p_detail" style="width:49%;" src="./media/teamwork01.jpg" alt="Working on the project"> 
+	<img class="p_detail" style="width:49%;" src="./media/teamwork02.jpg" alt="Storyboarding and concept design">
+</figure>
 
 <a href="#" onClick="history.go(-1);return true;">\< Go Back</a>
