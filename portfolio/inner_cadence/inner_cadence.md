@@ -55,10 +55,7 @@ Finally, I formed batches of 60 frames with the corresponding orientation and an
 
 All of this was analyzed in Python, using [k-means](https://en.wikipedia.org/wiki/K-means_clustering) to create clusters for each movement type, extracting different characteristics across the recorded individuals. These clusters would later on be used for the real-time movement classfication.
 
-<!-- ## Movement enhancement
-
-Shaders & particles -->
-
+<!-- ## Movement enhancement : Shaders & particles -->
 
 ## User tests & prototyping
 
@@ -66,7 +63,7 @@ Shaders & particles -->
 <mark class="sideR">An early user test involved a motion-detection Processing sketch to see how people interact when movement triggers the interaction.</mark>
 
 <figure class="vid_side" style="text-align: center">
-    <video class="vid_doc" autoplay loop muted />
+    <video class="vid_doc" autoplay loop muted>
         <source src="./media/test_granular.webm" type="video/webm">
         <source src="./media/test_granular.mp4" type="video/mp4">
     </video>
@@ -74,7 +71,7 @@ Shaders & particles -->
 </div>
 
 <figure class="vid_container vid_sq vid_sm" style="text-align: center">
-    <video class="vid_doc" autoplay loop muted />
+    <video class="vid_doc" autoplay loop muted>
         <source src="./media/early_test.webm" type="video/webm">
         <source src="./media/early_test.mp4"  type="video/mp4">
     </video>
@@ -86,13 +83,13 @@ By putting everything together, I created the first prototype, an interconnected
 <br>
 <div class="vid_sm" style="display: flex;">
 	<figure class="vid_container vid_720x2" style="text-align: center">
-        <video class="vid_doc" autoplay loop muted width="40%" />
+        <video class="vid_doc" autoplay loop muted width="40%">
             <source src="./media/test_rec01.webm" type="video/webm">
             <source src="./media/test_rec01.mp4" type="video/mp4">
         </video>
     </figure>
     <figure class="vid_container vid_720x2" style="text-align: center">
-        <video class="vid_doc" autoplay loop muted width="40%" />
+        <video class="vid_doc" autoplay loop muted width="40%">
             <source src="./media/test_scr01.webm" type="video/webm">
             <source src="./media/test_scr01.mp4" type="video/mp4">
         </video>
@@ -102,13 +99,13 @@ By putting everything together, I created the first prototype, an interconnected
 
 <div class="vid_sm" style="display: flex;">
 	<figure class="vid_container vid_720x2" style="text-align: center">
-        <video class="vid_doc" autoplay loop muted width="40%" />
+        <video class="vid_doc" autoplay loop muted width="40%">
             <source src="./media/test_rec02.webm" type="video/webm">
             <source src="./media/test_rec02.mp4" type="video/mp4">
         </video>
     </figure>
     <figure class="vid_container vid_720x2" style="text-align: center">
-        <video class="vid_doc" autoplay loop muted width="40%" />
+        <video class="vid_doc" autoplay loop muted width="40%">
             <source src="./media/test_scr02.webm" type="video/webm">
             <source src="./media/test_scr02.mp4" type="video/mp4">
         </video>
@@ -133,7 +130,7 @@ Finally, I created a 3-part video wall that analyzes people’s characteristic m
 
 <br>
 <figure class="vid_container vid_720_full" style="text-align: center">
-    <video src="./media/innercad_02.webm" class="vid_doc" autoplay loop />
+    <video src="./media/innercad_02.webm" class="vid_doc" autoplay loop>
 </figure>
 <figcaption>Audience interacting with the project at Unfolded Realities</figcaption>
 

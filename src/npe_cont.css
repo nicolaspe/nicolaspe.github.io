@@ -60,7 +60,7 @@ nav a {
 footer {
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-weight: lighter;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-style: italic;
   text-align: center;
   margin-bottom: 2em;
@@ -209,12 +209,15 @@ img {
 }
 figcaption {
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
-  font-size: 0.75em;
+  font-size: 0.8em;
   text-align: center;
   margin-bottom: 2em;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+.line-group > figcaption {
+  margin-bottom: 0;
 }
 
 /* == VIDEOS == */

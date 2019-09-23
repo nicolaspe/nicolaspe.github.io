@@ -53,9 +53,9 @@ nav a {
   padding-left: 30px;
 }
 footer {
-  font-family: "Lato", Verdana, Arial, sans-serif;
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-weight: lighter;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-style: italic;
   text-align: center;
   margin-bottom: 2em;
