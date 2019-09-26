@@ -1,6 +1,6 @@
 # About me
 
-Nicolás Escarpentier is a non-binary immersive media artist/technologist from Santiago, Chile. Specialized in VR/AR and large-scale interactive installations, they focus on identifying opportunities across emerging technologies to project-specific solutions. Their projects aim to augment and create non-conventional forms of expression with far-reaching impact, pushing the state of the art on experiential storytelling. 
+Nicolás Escarpentier is a non-binary immersive media artist/technologist from Santiago, Chile. Specialized in VR/AR and large-scale interactive installations, they focus on identifying opportunities across emerging technologies to project-specific solutions. Their projects aim to augment and create non-conventional forms of expression with far-reaching impact, pushing the state of the art on experiential storytelling.
 <!-- Nicolás has excellent project managment and team leadership skills and extensive client-facing experience -->
 
 <figure class="profile">

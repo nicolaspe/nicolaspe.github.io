@@ -18,7 +18,15 @@ Made in collaboration with [Ridwan Madon](https://www.ridwanmadon.com/), [Xiaowe
 
 Coalition is an exploration of motion as expression of individuality and the struggle against oppressive societies. It is an immersive live experience that represent the union of motion and sound conveying individuality and uniqueness against the status quo of society
 
-<figure class="proj_img proj_img_center" style="text-align: center">
+<!-- CONCEPT & GOAL -->
+
+<!-- TECH BEHIND -->
+
+<!-- PROCESS / PUTTING IT TOGETHER -->
+
+<!-- INSTALLATION -->
+
+<figure class="proj_img proj_img_full" style="text-align: center">
   <img class="p_capture" src="./coalition_ux1.jpg" alt="Solo user experience">
   <br/>
   <img class="p_capture" src="./coalition_ux2.jpg" alt="Dual user experience">
@@ -34,6 +42,7 @@ This oppression has long lasting direct and side effects on communities, and is 
 </figure>
 
 Coalition aims to instigate a reflection on this issue by letting users explore a 3d environment via motion triggered by their own expression. In this piece, diversity will be represented by choreographies and sounds from different cultures, referencing the oppression of immigrant communities around the world.
+
 
 <figure class="proj_img proj_img_tall" style="text-align: center">
   <img class="p_capture" src="./coalition_poster.jpg" alt="Coalition poster">
