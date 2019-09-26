@@ -11,7 +11,7 @@ Nicolás has a M.P.S. degree from NYU’s [Interactive Telecommunications Progra
 
 <br>
 
-[Download my CV here](https://drive.google.com/file/d/1slFtjswGtGnyAEmall3oDxSJ4afbUsaZ/view?usp=sharing)
+[Download my resume here](https://drive.google.com/file/d/1slFtjswGtGnyAEmall3oDxSJ4afbUsaZ/view?usp=sharing)
 
 ## exhibitions
 

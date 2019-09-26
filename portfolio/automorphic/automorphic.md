@@ -16,7 +16,8 @@ Automorphic is a 3D printed sclupture that serves as a canvas for multiple proje
     <img class="p_capture" src="./model.jpg" alt="Automorphic physical model">
 </figure>
 
-<p>Following the principles of responsive architecture, Automorphic is an architectural object that can modify its presence in response to its immediate environment. The aesthetic of this “smart” object is defined on its own, based on the data collected from its surroundings. Instead of following the direct and deliberate process of its creator, the audience around becomes the designer by inadvertently modifying this temporary three-dimensional aesthetic.</p>
+Following the principles of responsive architecture, Automorphic is an architectural object that can modify its presence in response to its immediate environment. The aesthetic of this “smart” object is defined on its own, based on the data collected from its surroundings. Instead of following the direct and deliberate process of its creator, the audience around becomes the designer by inadvertently modifying this temporary three-dimensional aesthetic.
+
 </div>
 
 <figure class="proj_img proj_img_center" style="text-align: center; display: block;">

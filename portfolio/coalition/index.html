@@ -22,30 +22,79 @@
 
         <main> 
 <h1>Coalition</h1>
-<p>A motion-based interactive experience about diversity in an oppressive society. 
-Made in collaboration with <a href="https://www.ridwanmadon.com/">Ridwan Madon</a>, <a href="https://wp.nyu.edu/llllllxw/author/xl2334/">Xiaowei Lu</a> and <a href="http://yibingqian.org/">Yibing Qian</a>.</p>
+<p><mark>A motion-based interactive experience about diversity in an oppressive society.</mark></p>
+
+<p>Made in collaboration with <a href="https://www.ridwanmadon.com/">Ridwan Madon</a>, <a href="https://wp.nyu.edu/llllllxw/author/xl2334/">Xiaowei Lu</a> and <a href="http://yibingqian.org/">Yibing Qian</a>.</p>
+<div style="width:80%;margin-left:auto;margin-right:auto">
 <figure class="vid_container vid_16x9 vid_ext" style="text-align:center">
   <iframe src="https://www.youtube.com/embed/mPhG_J-Jd5M" frameborder="0" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
 </figure>
-<p>Coalition is an exploration of motion as expression of individuality and the struggle against oppressive societies. It is an immersive live experience that represent the union of motion and sound conveying individuality and uniqueness against the status quo of society</p>
-<figure class="proj_img proj_img_center" style="text-align:center">
-  <img class="p_capture" src="./coalition_ux1.jpg" alt="Solo user experience">
-  <br>
-  <img class="p_capture" src="./coalition_ux2.jpg" alt="Dual user experience">
-	<figcaption>User experience diagrams</figcaption>
+</div>
+<h2 id="concept">Concept</h2>
+<p>Coalition is an exploration of motion as expression of individuality and the struggle against oppressive societies. It is an immersive live experience that represents the union of motion and sound conveying individuality and uniqueness against the status quo of society.</p>
+<div class="line-group">
+<p>We see motion as a form of expression, which conveys individuality and emotions. When placed in the context of its environment, this uniqueness and diversity will often be met with resistance, as society as a whole prefers to maintain the status-quo. This oppression has long lasting direct and side effects on communities, and is ever present in our times. But where as individuals, we are powerless against society, as we unite we aim and thrive for the common good.</p>
+<figure class="proj_img proj_img_tall" style="text-align:center;width:40%">
+  <img class="p_capture" src="./media/coalition_poster.jpg" alt="Coalition poster">
+  <figcaption>Coalition poster for the exhibition @ NYU Tandon</figcaption>
 </figure>
-<p>We see motion as a form of expression, which conveys individuality and emotions. When placed in the context of its environment, this uniqueness and diversity will often be met with resistance, as society as a whole prefers to maintain the status-quo.</p>
-<p>This oppression has long lasting direct and side effects on communities, and is ever present in our times. As individuals, we are powerless against society. As we unite, we aim for the common good.</p>
+</div>
+<h2 id="capturing-movement">Capturing movement</h2>
+<p>To illustrate diversity in a movement-based experience, we selected dances from four different cultures. In this sense, the minorities we showcase represent the oppressed migrant communities around the world, struggling to make a home in a new place.</p>
+<p>Using NYU’s <a href="https://www.optitrack.com/">OptiTrack</a> motion capture system, we recorded each of the dances in different forms, letting us seamlesly move between states depending on the user input.</p>
+<figure class="vid_container vid_720" style="text-align:center">
+    <video class="vid_doc" autoplay loop>
+        <source src="./media/bim_mocap.mp4" t ype="video/mp4">
+        
+    </video>
+</figure>
+<figcaption>Motion capture recording session and retargeting in MotionBuilder</figcaption>
+<h2 id="motion-controllers">Motion Controllers</h2>
+<div class="line-group">
+<figure class="proj_img proj_img_sideR" style="text-align:center">
+    <img class="p_detail" style="width:45%" src="./media/coalition_baton.gif" alt="Baton controller">
+    <img class="p_detail" style="width:45%" src="./media/coalition_ribbon.gif" alt="Ribbon controller">
+</figure>
+<p>In order to promote movement from the audience which we could track, we relied on physical controllers. Our research showed that people were more willing to move when they had an implement at ther disposal. Thus, we 3d modeled and printed two different controllers, fashioned after rhythmic gymnastics tools: a baton and a ribbon. The spherical blobs on the top were covered with reflective tape to be tracked by the OptiTrack system.</p>
+</div>
+<div class="line-group" style="margin-top:-2em">
+<p>These controllers house inside the components needed to communicate with the main computer via bluetooth, assigning a color to the controller. RGB LEDs would display this color on the middle section of the handle, matching the color and signaling the avatar each member of the audience controlled</p>
+<figure class="proj_img proj_img_sideR" style="text-align:center">
+    <img class="p_detail" style="width:75%" src="./media/coalition_controller.jpg" alt="Finished controller with lights inside">
+</figure>
+</div>
+<h2 id="the-environment">The environment</h2>
+<p>To accompany the dances from each culture, we crafted a digital environment containing objects and symbols characteristical to them. Each object would have the chance to appear on the environment depending on the avatars spawned by the users. This helped us further make the connections between the dances and the cultures they represent.</p>
+<figure class="proj_img proj_img_full" style="text-align:center">
+  <img class="p_capture" src="./media/coalition_unreal.jpg" alt="Coalition environment in Unreal Engine">
+	<figcaption>Coalition's virtual environment</figcaption>
+</figure>
+
+<div class="line-group">
+<p>This virtual environment is projected on three walls of the installation. Layers of organza are hung to create more depth and enhance the immersion. Unfortunately, this material creates interference with the motion capture system, meaning we had to place them almost touching the walls.</p>
+<figure class="vid_side" style="text-align:center">
+    <video style="width:80%" autoplay loop muted>
+        <source src="./media/bim_organza.mp4" type="video/mp4">
+        
+    </video>
+</figure>
+</div>
+<br>
+<h2 id="user-experience">User experience</h2>
+<p>In order to make the audience part of the projected virtual environment, each user spawns an avatar as soon as they start dancing with the controllers. As long as they keep dancing, their avatars will dance along, and it’s up to them to choose the fate of their virtual dancer. Whether they just stop or choose to dance with someone else, the effect on the avatar -and the environment- will be different.</p>
+<figure class="proj_img proj_img_full" style="text-align:center">
+  <img class="p_capture" src="./media/coalition_ux1.jpg" alt="Solo user experience">
+  <br>
+  <img class="p_capture" src="./media/coalition_ux2.jpg" alt="Dual user experience">
+	<figcaption>User experience diagrams -illustrated by Yibing Qian</figcaption>
+</figure>
+<br>
+<h2 id="installation">Installation</h2>
+<p>This installation aimed to instigate a reflection on this issue by letting users explore a 3d environment via motion triggered by their own expression. We achieved that by making the audience become part of a diverse virtual community, represented by choreographies and sounds from different cultures. Through their own movements and interactions, they transformed this installation into an experience of awe and joy.</p>
 <figure class="vid_container vid_16x9 vid_ext" style="text-align:center">
   <iframe src="https://player.vimeo.com/video/327081816" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
-<p>Coalition aims to instigate a reflection on this issue by letting users explore a 3d environment via motion triggered by their own expression. In this piece, diversity will be represented by choreographies and sounds from different cultures, referencing the oppression of immigrant communities around the world.</p>
-<figure class="proj_img proj_img_tall" style="text-align:center">
-  <img class="p_capture" src="./coalition_poster.jpg" alt="Coalition poster">
-  <figcaption>Coalition poster</figcaption>
-</figure>
-<p><a href="./Coalition_PressKit.pdf">Download the PressKit here</a></p>
-<br>
+<p><a href="./presskit.pdf">Download the PressKit here</a></p>
 <br>
 <p><a href="#" onclick="return history.go(-1),!0">Go Back</a></p>
  </main>
