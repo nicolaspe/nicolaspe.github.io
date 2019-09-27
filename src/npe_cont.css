@@ -207,6 +207,14 @@ img {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+.proj_img_sideR_sm{
+  min-width: 50px;
+  width: 15%;
+  float: right;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 figcaption {
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
   font-size: 0.8em;
