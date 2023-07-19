@@ -22,8 +22,7 @@ Rhythmic Skin aims to solve the issue of auditive overload and relieve pressure 
 
 <div class="line-group">
 
-Driven by a [Teensy](https://www.pjrc.com/teensy/)
-and a set of small vibration motors with their driver components (which were later removed in a revised version), this wearable device sends messages directly to the user's back. The haptic motors are mounted on small acrylic discs to provide a rigid backing so their vibrations are not absorbed by the fabrics.
+Driven by a [Teensy](https://www.pjrc.com/teensy/) and a set of small vibration motors with their driver components (which were later removed in a revised version), this wearable device sends messages directly to the user's back. The haptic motors are mounted on small acrylic discs to provide a rigid backing so their vibrations are not absorbed by the fabrics.
 
 <figure class="proj_img proj_img_sideR" style="text-align: center">
 	<img class="p_capture" src="./media/rhsk_haptic.jpg" alt="Small vibration motor and the Haptic motor driver">
