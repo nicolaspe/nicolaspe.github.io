@@ -3,9 +3,346 @@
     <head>
         <meta charset="utf-8">
         <title> Heart of a Survivor - npe </title>
-        <link rel="stylesheet" href="../../src/npe_cont.css">
-        <script src="../../src/js/header_vis.js"></script>
-        <link href="../src/favicon.ico" rel="icon">
+        <style>@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdKb3NlZmluIFNhbnMnOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9qb3NlZmluc2Fucy92MjYvUXczSlpRTlZFRDdyS0dLeHRxSXFYNUVVQ0daMmRJbjBGeUE5NmZDVHRJTlJMU3p0LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M0paUU5WRUQ3cktHS3h0cUlxWDVFVUNHWjJkSW4wRnlBOTZmQ1Q2b0pSTFN6dC50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0pvc2VmaW4gU2Fucyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2pvc2VmaW5zYW5zL3YyNi9RdzNKWlFOVkVEN3JLR0t4dHFJcVg1RVVDR1oyZEluMEZ5QTk2ZkNUdElKUkxTenQudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdKb3NlZmluIFNhbnMnOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9qb3NlZmluc2Fucy92MjYvUXczSlpRTlZFRDdyS0dLeHRxSXFYNUVVQ0daMmRJbjBGeUE5NmZDVGhvSlJMU3p0LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M0paUU5WRUQ3cktHS3h0cUlxWDVFVUNHWjJkSW4wRnlBOTZmQ1RVNFZSTFN6dC50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0pvc2VmaW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAxMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2pvc2VmaW5zYW5zL3YyNi9RdzNQWlFOVkVEN3JLR0t4dHFJcVg1RS1BVlNKck9DZmpZNDZfRGpSYk1aaEtnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M1BaUU5WRUQ3cktHS3h0cUlxWDVFLUFWU0pyT0Nmalk0Nl9HYlFiTVpoS2cudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdKb3NlZmluIFNhbnMnOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9qb3NlZmluc2Fucy92MjYvUXczUFpRTlZFRDdyS0dLeHRxSXFYNUUtQVZTSnJPQ2ZqWTQ2X0RqUWJNWmhLZy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0pvc2VmaW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2pvc2VmaW5zYW5zL3YyNi9RdzNQWlFOVkVEN3JLR0t4dHFJcVg1RS1BVlNKck9DZmpZNDZfQXJRYk1aaEtnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M1BaUU5WRUQ3cktHS3h0cUlxWDVFLUFWU0pyT0Nmalk0Nl9OX1hiTVpoS2cudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0K");
+@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2lDbnFFdTkyRnIxTXU1MVFyRXpBZEtnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9qQ25xRXU5MkZyMU11NTFUakFTYzZDc0UudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2tDbnFFdTkyRnIxTXU1MXhJSXpjLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9qQ25xRXU5MkZyMU11NTFTN0FDYzZDc0UudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNzAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2pDbnFFdTkyRnIxTXU1MVR6QmljNkNzRS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA5MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MzAvS0ZPakNucUV1OTJGcjFNdTUxVExCQ2M2Q3NFLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9rQ25xRXU5MkZyMU1tZ1Z4SUl6Yy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAzMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MzAvS0ZPbENucUV1OTJGcjFNbVNVNWZCQmM5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9tQ25xRXU5MkZyMU11NG14UC50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MzAvS0ZPbENucUV1OTJGcjFNbUVVOWZCQmM5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9sQ25xRXU5MkZyMU1tV1VsZkJCYzkudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogOTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2xDbnFFdTkyRnIxTW1ZVXRmQkJjOS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQo=");
+@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1LXc0Qk1VVFBIanhzSVB4LW9QQ2MudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1X3c0Qk1VVFBIanhzSTl3Ml9Hd2ZvLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnTGF0byc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2xhdG8vdjI0L1M2dTh3NEJNVVRQSGp4c0FYQy12LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnTGF0byc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA3MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2xhdG8vdjI0L1M2dV93NEJNVVRQSGp4c0k1d3FfR3dmby50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0xhdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogOTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9sYXRvL3YyNC9TNnVfdzRCTVVUUEhqeHNJM3dpX0d3Zm8udHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1OHc0Qk1VVFBIaDMwQVhDLXYudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1OXc0Qk1VVFBIaDdVU1N3aVBIQS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0xhdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9sYXRvL3YyNC9TNnV5dzRCTVVUUEhqeDR3V3cudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1OXc0Qk1VVFBIaDZVVlN3aVBIQS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0xhdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogOTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9sYXRvL3YyNC9TNnU5dzRCTVVUUEhoNTBYU3dpUEhBLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9Cg==");
+@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiAxMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweG9ERjR4bFZNRi1CZlI4YlhNSWpoT3NYRy1xMm9ldUZvcUZybG5BZFc2Q3B3LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMzAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG9tb25vL3YyMi9MMHhvREY0eGxWTUYtQmZSOGJYTUlqaE9zWEctcTJvZXVGb3FGcms1QU5XNkNwdy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvbW9uby92MjIvTDB4b0RGNHhsVk1GLUJmUjhiWE1JamhPc1hHLXEyb2V1Rm9xRnJsbkFOVzZDcHcudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweG9ERjR4bFZNRi1CZlI4YlhNSWpoT3NYRy1xMm9ldUZvcUZybFZBTlc2Q3B3LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNzAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG9tb25vL3YyMi9MMHhvREY0eGxWTUYtQmZSOGJYTUlqaE9zWEctcTJvZXVGb3FGcm1BQjlXNkNwdy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvbW9uby92MjIvTDB4dURGNHhsVk1GLUJmUjhiWE1JaEpIZzQ1bXdnR0VGbDBfM3Z1X1JPVzkudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAzMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweHVERjR4bFZNRi1CZlI4YlhNSWhKSGc0NW13Z0dFRmwwX2dQcV9ST1c5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG9tb25vL3YyMi9MMHh1REY0eGxWTUYtQmZSOGJYTUloSkhnNDVtd2dHRUZsMF8zdnFfUk9XOS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvbW9uby92MjIvTDB4dURGNHhsVk1GLUJmUjhiWE1JaEpIZzQ1bXdnR0VGbDBfN1BxX1JPVzkudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA3MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweHVERjR4bFZNRi1CZlI4YlhNSWhKSGc0NW13Z0dFRmwwX09mMl9ST1c5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9Cg==");
+
+
+html {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  background: white;
+  /* background: rgb(78,49,102); */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: rgb(237, 100, 207);
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+a{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  font-style: italic;
+}
+
+
+header {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  font-size: 3em;
+  font-weight: bold;
+}
+nav {
+  float: right;
+  display: inline-block;
+  font-size: 0.5em;
+}
+nav a {
+  padding-left: 30px;
+}
+footer {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-weight: lighter;
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+
+h1, h2, h3 {
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* color: rgb(58,39,82); */
+  color: rgb(42, 34, 46);
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+  font-variant: all-small-caps;
+  margin-bottom: 0;
+}
+.title a:hover {
+  font-style: none;
+}
+section {
+  margin-top: 50px;
+}
+main {
+  /* font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif; */
+  font-family: "Lato", Helvetica, Verdana, Arial, sans-serif;
+  /* font-weight: lighter; */
+  color: rgb(78,49,102);
+}
+main p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: inline-block; */
+  font-size: 1.1rem;
+  line-height: 170%;
+}
+main .sideR{
+  width: 45%;
+  display: inline-block;
+}
+main a{
+  font-style: normal;
+  text-decoration: underline;
+}
+main a:hover {
+  font-style: normal;
+  text-decoration: underline;
+}
+.details {
+  display: inline-block;
+  width: 40%;
+  float: right;
+}
+blockquote {
+  font-style: italic;
+  font-size: 1em;
+  border-left: 2px solid rgb(98,69,122);
+  padding-left: 4px;
+  color: rgb(98,69,122);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vid_doc {
+  width: 100%;
+}
+
+main ul{
+  list-style-type: disc;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* font-size: 1.2em; */
+}
+main li{
+  padding: 5px 0px 15px 0px;
+}
+
+main mark {
+  font-size: 1.5em;
+  background-color: inherit;
+}
+
+.line-group {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.line-group > p {
+  margin: 0;
+  width: 50%;
+}
+
+/* == IMAGES == */
+img {
+  width: 100%;
+}
+.proj_img_full{
+  width: 100%;
+  margin: 0;
+}
+.proj_img_center{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_tall{
+  width: 50%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_sm{
+  width: 40%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_sideL{
+  min-width: 250px;
+  width: 40%;
+  float: left;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.proj_img_sideR{
+  min-width: 250px;
+  width: 45%;
+  float: right;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.proj_img_sideR_sm{
+  min-width: 50px;
+  width: 15%;
+  float: right;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+figcaption {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  text-align: center;
+  margin-bottom: 2em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.line-group > figcaption {
+  margin-bottom: 0;
+}
+
+/* == VIDEOS == */
+.vid_container {
+  position: relative;
+  /* width: 100%; */
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vid_sm {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vid_container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.vid_16x9 {
+	padding-bottom: 56.25%;
+}
+.vid_720 {
+  padding-bottom: 45.90%;
+}
+.vid_720x2 {
+  padding-bottom: 28%;
+  margin-bottom: 0.5em;
+}
+.vid_720_full {
+  padding-bottom: 56.20%;
+}
+.vid_4x3 {
+	padding-bottom: 75%;
+}
+.vid_sq {
+	padding-bottom: 50%;
+}
+.vid_side {
+  width: 45%;
+  /* padding-bottom: 22%; */
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.vid_ext {
+  width: 90%;
+  padding-bottom: 50.625%;
+  margin-top:    2em;
+  margin-bottom: 2em;
+}
+
+.col_50{
+  width: 45%;
+  display: inline-block;
+}</style>
+        <script>let header;
+let timekeep;
+let color;
+
+const c1 = [ 78,  49, 102];
+const c2 = [237, 100, 207];
+const c3 = [ 21, 192, 255];
+
+window.addEventListener('load', init);
+
+function init(){
+    header = document.querySelectorAll("header")[0];
+    timekeep = 0;
+    color = [0, 0, 0];
+
+    header.style.color = getColor(c1);
+
+    setInterval(update, 30);
+}
+
+
+function update(){
+    // update the timekeep
+    timekeep += 0.02;
+
+    // with a sine function we see if we go from c1 to c2 or c3
+    let t = Math.sin(timekeep);
+    let c;
+    if ( t>0 ) { c = c2; }
+    else { c = c3; }
+
+    // now we interpolate between both values
+    t = Math.abs(t);
+    for (let i = 0; i < color.length; i++) {
+        color[i] = lerp(c1[i], c[i], t);
+    }
+
+    // and change the color of the text
+    header.style.color = getColor(color);
+}
+
+
+// === UTILITY FUNCTIONS
+function getColor(c){
+    return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")";
+}
+function lerp(x0, x1, t){
+    return x0*(1-t) + x1*t;
+}</script>
+        <link href="../src/favicon.ico" rel="icon" />
     </head>
 
     <body>
@@ -15,25 +352,31 @@
             <span class="title"><a href="/">NE</a></span>
             <nav>
                 <a href="/">work</a>
-                
+                <!-- <a href="https://www.behance.net/nicolaspe">experiments</a> -->
+                <a href="/external">external</a>
                 <a href="/about">about</a>
             </nav>
         </header>
 
-        <main> 
+        <main> <!--
+title: "Heart of a Survivor"
+date:  "2019-08-31"
+display: true
+weight: 1
+-->
 <h1>Heart of a Survivor</h1>
 <p>Heart of a Survivor (working title) is the prototype for an unreleased festival-bound virtual reality experience, that takes the audience through a story of loss, love and hope: a journey through the heart of a genocide survivor.</p>
 <p><code>As this is a yet-unreleased piece, I will not disclose specific details about the piece, instead focusing on the creative and technical journey.</code></p>
-<figure class="proj_img proj_img_full" style="text-align:center">
+<figure class="proj_img proj_img_full" style="text-align: center">
 	<img class="p_capture" src="./media/stayalive.png" alt="Heart Survivor, prototype scene">
 </figure>
-<h2 id="adapting-screenplay">Adapting screenplay</h2>
+<h2 id="adapting-screenplay" tabindex="-1">Adapting screenplay</h2>
 <p>I worked alongside <a href="https://www.ejectnow.com/">Gabriel Brasil</a>, fellow technologist and art director, to take the script of this heart-wrenching story and transform it to an immersive VR piece. Being a new medium, VR doesn’t have an established language as cinema or theatre. As such, it falls into the shoulders of us technologist to work alonside the writers and directors to adapt their scripts, showing them what’s possible in this emerging environment and employing the full extent of the opportunities it provides.</p>
 <div class="line-group">
 <mark class="sideR">The core questions when starting a VR experience: "Why is this in VR? How does it use its capabilities? Who is the user and what can the user do?"</mark>
 <div>
-  <figure class="vid_container vid_16x9" style="text-align:center">
-    <iframe src="https://player.vimeo.com/video/358901555" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <figure class="vid_container vid_16x9" style="text-align: center">
+    <iframe src="https://player.vimeo.com/video/358901555"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </figure>
   <figcaption>Ideation session timelapse - edited by Gabriel Brasil</figcaption>
 </div>
@@ -41,99 +384,99 @@
 <p>The script was thoroughly dissected and analyzed from several points of view: story beats and narrative structure, user placement and interaction possiblilities, technical elements and how they play along in VR, scene composition, and more. All these elements were then submitted to the director, presenting her with options and feedback, and starting a collaborative iteration in order to accomplish her view.</p>
 <br>
 <div class="line-group">
-<figure class="proj_img proj_img_sideR" style="text-align:center">
+<figure class="proj_img proj_img_sideR" style="text-align: center">
     <img class="p_detail" src="./media/hs_heart00.jpg" alt="Concept drawing of the heart environment housing one of the memories">
 </figure>
 <p>The memories are recounted inside the metaphorical heart of the main character. The user embodies his presence in the memories, making them a key narrative tool. And as it’s not trying to replicate reality, the art direction reflected this from the beginning.</p>
 </div>
-<figure class="proj_img proj_img_full" style="text-align:center;display:block">
-	<img class="p_detail" style="width:49.8%" src="./media/hs_heart02.jpg" alt="3d heart environment with template objects">
-  <img class="p_detail" style="width:49.8%" src="./media/hs_heart03.jpg" alt="Wide shot of the 3d heart environment">
+<figure class="proj_img proj_img_full" style="text-align: center; display: block;">
+	<img class="p_detail" style="width:49.8%;" src="./media/hs_heart02.jpg" alt="3d heart environment with template objects">
+  <img class="p_detail" style="width:49.8%;" src="./media/hs_heart03.jpg" alt="Wide shot of the 3d heart environment">
   <figcaption>3d heart environment that houses the entire experience</figcaption>
 </figure>
-<h2 id="designing-interactions">Designing interactions</h2>
+<h2 id="designing-interactions" tabindex="-1">Designing interactions</h2>
 <p>As an inherently immersive medium, the realm of possibilities of user interactions in VR has to be aligned with the idea of embodiment. As such, they have to be carefully designed. The interactions have to be unobtrussive and transparent, as a mechanic cannot take the user out of the experience.</p>
 <p>This can be achieved in two ways. First, we can take advantage of movements that come natural to us, such as grabbing or reaching out to things. Or second, we can incorporate one new action in the beginning of the experience, reinforcing it over the first minutes, so that it becomes natural for the audience and they don’t have to actively think to perform it.</p>
-<figure class="vid_container vid_720_full" style="text-align:center">
+<figure class="vid_container vid_720_full" style="text-align: center">
     <video class="vid_doc" controls>
         <source src="./media/demo_interaction.mp4" type="video/mp4">
     </video>
 </figure>
 <figcaption>Reaching out for a memory object activates the scene</figcaption>
-<h2 id="animatics-%26-360-shooting">Animatics &amp; 360 shooting</h2>
+<h2 id="animatics-%26-360-shooting" tabindex="-1">Animatics &amp; 360 shooting</h2>
 <p>After designing the interactions, laying out the storyboards and with the script in a good state, we needed to prototype the current state to move forward. We recorded ourselves as scratch track and animated the 2d boards, and later a basic VR 3d blocking. Even with stock assets and minimal animations, we were able to get a feel of the pace, interactions and story inside the headset.</p>
-<figure class="vid_container vid_720" style="text-align:center">
-  <iframe src="https://player.vimeo.com/video/358558909" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<figure class="vid_container vid_720" style="text-align: center">
+  <iframe src="https://player.vimeo.com/video/358558909"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <figcaption>View of 2d, 3d and volumetric animatics done with Gabriel Brasil</figcaption>
-
+<!-- 360 shooting -->
 <br>
 <div class="line-group">
 <p>With the need to better understand and lock the motion script, we were joined by <a href="https://www.chrissyelie.com/">Chris Hall</a> to do a 360 shooting with professional actors. We played out the entire script, keeping track of motion and distance to the camera - an Insta 360, which let us quickly review the material on an Oculus Go.</p>
-<figure class="proj_img proj_img_sideR" style="text-align:center">
+<figure class="proj_img proj_img_sideR" style="text-align: center">
     <img class="p_detail" src="./media/hs_360.jpg" alt="360 shooting day - photo by Gabriel Brasil">
 </figure>
 </div>
-<h2 id="exploring-pipelines-for-volumetric-technologies">Exploring pipelines for volumetric technologies</h2>
+<h2 id="exploring-pipelines-for-volumetric-technologies" tabindex="-1">Exploring pipelines for volumetric technologies</h2>
 <p>Early on in the process, it became evident that such a powerful and intimate story needed specialized elements to create a deep human connection. To replicate the subtleties of human microgestures, something standard motion capture cannot convey, we looked at volumetric capture technologies.</p>
-
+<!-- VOLUMETRIC CAPTURE TECH & TESTS -->
 <br>
 <div class="line-group">
-<div class="vid_side" style="text-align:center">
-  <figure style="margin:0">
-    <video class="vid_doc" controls muted>
-        
-        <source src="./media/hs_volumetric.mp4" type="video/mp4">
-    
+<div class="vid_side" style="text-align: center">
+  <figure style="margin: 0" >
+    <video class="vid_doc" controls muted />
+        <!-- <source src="./media/hs_volumetric.webm" type="video/webm"> -->
+        <source src="./media/hs_volumetric.mp4"  type="video/mp4">
+    </video>
 </figure>
-<figcaption style="margin-bottom:0">Test of a volumetric asset by 4DSViews with custom shaders materials to achieve a dreamy feel</figcaption>
+<figcaption style="margin-bottom: 0;">Test of a volumetric asset by 4DSViews with custom shaders materials to achieve a dreamy feel</figcaption>
 </div>
 <p>First, we tested two different products from full 3d volumetric capture studios: <a href="https://www.4dviews.com/">4DSViews’ Holosys</a> and the <a href="https://www.microsoft.com/en-us/mixed-reality/capture-studios">Microsoft’s Mixed Reality Capture Studio (MRCS)</a>. Despite achieving decent results in a short time, the degree of manipulation, reliability and costs of these solutions meant that we could not work with them.</p>
 </div>
-
-<h3 id="depthkit-in-unrealeninge">DepthKit in UnrealEninge</h3>
+<!-- PHOTOGRAMMETRY AND POINT CLOUDS -->
+<h3 id="depthkit-in-unrealeninge" tabindex="-1">DepthKit in UnrealEninge</h3>
 <p>Then, we moved to <a href="https://www.depthkit.tv/">DepthKit</a>, a fantastic 2.5d solution for volumetric capture. As there’s no plugin for Unreal Engine, the first step was come up with a proper pipeline. The exported OBJ sequence was imported into Maya <a href="https://www.highend3d.com/maya/script/obj-i-o-obj-sequences-import-export-for-maya">with a special plugin</a>, and re-exported as an <em>alembic cache</em>. This proved to be effective, but the textures kept desynchronizing with the geometry cache. To solve it, I used <em>ffmpeg</em> to batch downscale the images and used the level sequencer to manipulate their playback.</p>
-
+<!-- Face transplant -->
 <div class="line-group">
 <p>After getting the technology to work, I experimented with mixed alternatives. As a body’s performance can be replicated thanks to motion capture and DepthKit can capture the subtelties of facial performances, I combined both to leverage their strengths and cover their weaknesses: a virtual face transplant.</p>
-<div class="vid_side" style="text-align:center">
-  <figure style="margin:0">
-    <video class="vid_doc" autoplay loop muted>
-        
-        <source src="./media/DK_face.mp4" type="video/mp4">
-    
+<div class="vid_side" style="text-align: center">
+  <figure style="margin: 0" >
+    <video class="vid_doc" autoplay loop muted />
+        <!-- <source src="./media/DK_face.webm" type="video/webm"> -->
+        <source src="./media/DK_face.mp4"  type="video/mp4">
+    </video>
 </figure>
   <figcaption>Exploring possibilities: transplanting a volumetric facial performance into a 3d body</figcaption>
 </div>
 </div>
-<figure class="proj_img proj_img_full" style="text-align:center">
-  <img class="p_detail" style="width:98%" src="./media/dk_studio01.jpg" alt="Team at Sensorium's DepthKit studio @ RLab">
+<figure class="proj_img proj_img_full" style="text-align: center;">
+  <img class="p_detail" style="width:98%;" src="./media/dk_studio01.jpg" alt="Team at Sensorium's DepthKit studio @ RLab">
   <br>
-  <img class="p_detail" style="width:49%" src="./media/dk_studio02.jpg" alt="DepthKit recording at Sensorium's studio @ RLab"> 
-	<img class="p_detail" style="width:49%" src="./media/dk_screen.jpg" alt="DepthKit recording screen">
+  <img class="p_detail" style="width:49%;" src="./media/dk_studio02.jpg" alt="DepthKit recording at Sensorium's studio @ RLab"> 
+	<img class="p_detail" style="width:49%;" src="./media/dk_screen.jpg" alt="DepthKit recording screen">
   <figcaption>DepthKit recording at Sensorium's studio @ RLab</figcaption>
 </figure>
-<h2 id="creating-prototypes">Creating prototypes</h2>
+<h2 id="creating-prototypes" tabindex="-1">Creating prototypes</h2>
 <p>Finally, after getting the different pieces to work together, it was time to build a prototype of the entire experience. Each scene was created in it’s own level, as was the heart that acted as a hub between them. All of them were loaded on a persistent level, with a level sequencer controlling the visibility and playback of each individual scene.</p>
 <br>
-<figure class="vid_container vid_sq" style="text-align:center">
+<figure class="vid_container vid_sq" style="text-align: center">
     <video class="vid_doc" controls>
-        <source src="./media/hs_demo01.mp4" type="video/mp4">
+        <source src="./media/hs_demo01.mp4"  type="video/mp4">
         <source src="./media/hs_demo01.webm" type="video/webm">
     </video>
 </figure>
-<figure class="vid_container vid_sq" style="text-align:center">
+<figure class="vid_container vid_sq" style="text-align: center">
     <video class="vid_doc" controls>
-        <source src="./media/hs_demo02.mp4" type="video/mp4">
+        <source src="./media/hs_demo02.mp4"  type="video/mp4">
         <source src="./media/hs_demo02.webm" type="video/webm">
     </video>
 </figure>
 <figcaption>Prototypes of two scenes, incorporating interaction and volumetric assets</figcaption>
-<figure class="proj_img proj_img_full" style="text-align:center">
+<figure class="proj_img proj_img_full" style="text-align: center;">
   <img class="p_detail" src="./media/hs_jungle.jpg" alt="Prototype jungle scene"> 
 <figcaption>Prototype of the jungle scene, combining 3d and point cloud assets</figcaption>
 </figure>
-<h2 id="acknowledgements">Acknowledgements</h2>
+<h2 id="acknowledgements" tabindex="-1">Acknowledgements</h2>
 <p>I would like to thank to all the amazing people I worked with and helped develop this project. Going through this process has granted me a deeper insight into the affordances of VR and the different tools and pipelines that are yet to be created for it.</p>
 <ul>
 <li>Victoria Bousis, director and writer</li>
@@ -143,15 +486,15 @@
 <li><a href="https://www.chrissyelie.com/">Chris Hall</a></li>
 <li><a href="http://mishazv.com/bio/">Misha Zabranska</a></li>
 </ul>
-<figure class="proj_img proj_img_full" style="text-align:center">
-  <img class="p_detail" style="width:49%" src="./media/teamwork01.jpg" alt="Working on the project"> 
-	<img class="p_detail" style="width:49%" src="./media/teamwork02.jpg" alt="Storyboarding and concept design">
+<figure class="proj_img proj_img_full" style="text-align: center;">
+  <img class="p_detail" style="width:49%;" src="./media/teamwork01.jpg" alt="Working on the project"> 
+	<img class="p_detail" style="width:49%;" src="./media/teamwork02.jpg" alt="Storyboarding and concept design">
 </figure>
-<p><a href="#" onclick="return history.go(-1),!0">&lt; Go Back</a></p>
+<p><a href="#" onClick="history.go(-1);return true;">&lt; Go Back</a></p>
  </main>
 
         <footer>
-            <br>
+            <br />
             <p>website coded + designed by nicolás escarpentier - Sep 2019</p>
         </footer>
     </body>

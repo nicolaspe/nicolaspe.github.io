@@ -3,9 +3,346 @@
     <head>
         <meta charset="utf-8">
         <title> Collected Ego - npe </title>
-        <link rel="stylesheet" href="../../src/npe_cont.css">
-        <script src="../../src/js/header_vis.js"></script>
-        <link href="../src/favicon.ico" rel="icon">
+        <style>@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdKb3NlZmluIFNhbnMnOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9qb3NlZmluc2Fucy92MjYvUXczSlpRTlZFRDdyS0dLeHRxSXFYNUVVQ0daMmRJbjBGeUE5NmZDVHRJTlJMU3p0LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M0paUU5WRUQ3cktHS3h0cUlxWDVFVUNHWjJkSW4wRnlBOTZmQ1Q2b0pSTFN6dC50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0pvc2VmaW4gU2Fucyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2pvc2VmaW5zYW5zL3YyNi9RdzNKWlFOVkVEN3JLR0t4dHFJcVg1RVVDR1oyZEluMEZ5QTk2ZkNUdElKUkxTenQudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdKb3NlZmluIFNhbnMnOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9qb3NlZmluc2Fucy92MjYvUXczSlpRTlZFRDdyS0dLeHRxSXFYNUVVQ0daMmRJbjBGeUE5NmZDVGhvSlJMU3p0LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M0paUU5WRUQ3cktHS3h0cUlxWDVFVUNHWjJkSW4wRnlBOTZmQ1RVNFZSTFN6dC50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0pvc2VmaW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAxMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2pvc2VmaW5zYW5zL3YyNi9RdzNQWlFOVkVEN3JLR0t4dHFJcVg1RS1BVlNKck9DZmpZNDZfRGpSYk1aaEtnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M1BaUU5WRUQ3cktHS3h0cUlxWDVFLUFWU0pyT0Nmalk0Nl9HYlFiTVpoS2cudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdKb3NlZmluIFNhbnMnOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9qb3NlZmluc2Fucy92MjYvUXczUFpRTlZFRDdyS0dLeHRxSXFYNUUtQVZTSnJPQ2ZqWTQ2X0RqUWJNWmhLZy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0pvc2VmaW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2pvc2VmaW5zYW5zL3YyNi9RdzNQWlFOVkVEN3JLR0t4dHFJcVg1RS1BVlNKck9DZmpZNDZfQXJRYk1aaEtnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnSm9zZWZpbiBTYW5zJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvam9zZWZpbnNhbnMvdjI2L1F3M1BaUU5WRUQ3cktHS3h0cUlxWDVFLUFWU0pyT0Nmalk0Nl9OX1hiTVpoS2cudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0K");
+@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2lDbnFFdTkyRnIxTXU1MVFyRXpBZEtnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9qQ25xRXU5MkZyMU11NTFUakFTYzZDc0UudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2tDbnFFdTkyRnIxTXU1MXhJSXpjLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9qQ25xRXU5MkZyMU11NTFTN0FDYzZDc0UudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNzAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2pDbnFFdTkyRnIxTXU1MVR6QmljNkNzRS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA5MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MzAvS0ZPakNucUV1OTJGcjFNdTUxVExCQ2M2Q3NFLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9rQ25xRXU5MkZyMU1tZ1Z4SUl6Yy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAzMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MzAvS0ZPbENucUV1OTJGcjFNbVNVNWZCQmM5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9tQ25xRXU5MkZyMU11NG14UC50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MzAvS0ZPbENucUV1OTJGcjFNbUVVOWZCQmM5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YzMC9LRk9sQ25xRXU5MkZyMU1tV1VsZkJCYzkudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogOTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG8vdjMwL0tGT2xDbnFFdTkyRnIxTW1ZVXRmQkJjOS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQo=");
+@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1LXc0Qk1VVFBIanhzSVB4LW9QQ2MudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1X3c0Qk1VVFBIanhzSTl3Ml9Hd2ZvLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnTGF0byc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2xhdG8vdjI0L1M2dTh3NEJNVVRQSGp4c0FYQy12LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnTGF0byc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA3MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL2xhdG8vdjI0L1M2dV93NEJNVVRQSGp4c0k1d3FfR3dmby50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0xhdG8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogOTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9sYXRvL3YyNC9TNnVfdzRCTVVUUEhqeHNJM3dpX0d3Zm8udHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1OHc0Qk1VVFBIaDMwQVhDLXYudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDMwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1OXc0Qk1VVFBIaDdVU1N3aVBIQS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0xhdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9sYXRvL3YyNC9TNnV5dzRCTVVUUEhqeDR3V3cudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdMYXRvJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3MvbGF0by92MjQvUzZ1OXc0Qk1VVFBIaDZVVlN3aVBIQS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ0xhdG8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogOTAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9sYXRvL3YyNC9TNnU5dzRCTVVUUEhoNTBYU3dpUEhBLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9Cg==");
+@import url("data:text/css; charset=utf-8;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiAxMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweG9ERjR4bFZNRi1CZlI4YlhNSWpoT3NYRy1xMm9ldUZvcUZybG5BZFc2Q3B3LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMzAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG9tb25vL3YyMi9MMHhvREY0eGxWTUYtQmZSOGJYTUlqaE9zWEctcTJvZXVGb3FGcms1QU5XNkNwdy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvbW9uby92MjIvTDB4b0RGNHhsVk1GLUJmUjhiWE1JamhPc1hHLXEyb2V1Rm9xRnJsbkFOVzZDcHcudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweG9ERjR4bFZNRi1CZlI4YlhNSWpoT3NYRy1xMm9ldUZvcUZybFZBTlc2Q3B3LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogNzAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG9tb25vL3YyMi9MMHhvREY0eGxWTUYtQmZSOGJYTUlqaE9zWEctcTJvZXVGb3FGcm1BQjlXNkNwdy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDEwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvbW9uby92MjIvTDB4dURGNHhsVk1GLUJmUjhiWE1JaEpIZzQ1bXdnR0VGbDBfM3Z1X1JPVzkudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAzMDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweHVERjR4bFZNRi1CZlI4YlhNSWhKSGc0NW13Z0dFRmwwX2dQcV9ST1c5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9yb2JvdG9tb25vL3YyMi9MMHh1REY0eGxWTUYtQmZSOGJYTUloSkhnNDVtd2dHRUZsMF8zdnFfUk9XOS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBzcmM6IHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvbW9uby92MjIvTDB4dURGNHhsVk1GLUJmUjhiWE1JaEpIZzQ1bXdnR0VGbDBfN1BxX1JPVzkudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gTW9ubyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA3MDA7CiAgc3JjOiB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90b21vbm8vdjIyL0wweHVERjR4bFZNRi1CZlI4YlhNSWhKSGc0NW13Z0dFRmwwX09mMl9ST1c5LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9Cg==");
+
+
+html {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  background: white;
+  /* background: rgb(78,49,102); */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: rgb(237, 100, 207);
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+a{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  font-style: italic;
+}
+
+
+header {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  font-size: 3em;
+  font-weight: bold;
+}
+nav {
+  float: right;
+  display: inline-block;
+  font-size: 0.5em;
+}
+nav a {
+  padding-left: 30px;
+}
+footer {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-weight: lighter;
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+
+h1, h2, h3 {
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* color: rgb(58,39,82); */
+  color: rgb(42, 34, 46);
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+  font-variant: all-small-caps;
+  margin-bottom: 0;
+}
+.title a:hover {
+  font-style: none;
+}
+section {
+  margin-top: 50px;
+}
+main {
+  /* font-family: "Josefin Sans", Helvetica, Verdana, Arial, sans-serif; */
+  font-family: "Lato", Helvetica, Verdana, Arial, sans-serif;
+  /* font-weight: lighter; */
+  color: rgb(78,49,102);
+}
+main p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: inline-block; */
+  font-size: 1.1rem;
+  line-height: 170%;
+}
+main .sideR{
+  width: 45%;
+  display: inline-block;
+}
+main a{
+  font-style: normal;
+  text-decoration: underline;
+}
+main a:hover {
+  font-style: normal;
+  text-decoration: underline;
+}
+.details {
+  display: inline-block;
+  width: 40%;
+  float: right;
+}
+blockquote {
+  font-style: italic;
+  font-size: 1em;
+  border-left: 2px solid rgb(98,69,122);
+  padding-left: 4px;
+  color: rgb(98,69,122);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vid_doc {
+  width: 100%;
+}
+
+main ul{
+  list-style-type: disc;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* font-size: 1.2em; */
+}
+main li{
+  padding: 5px 0px 15px 0px;
+}
+
+main mark {
+  font-size: 1.5em;
+  background-color: inherit;
+}
+
+.line-group {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.line-group > p {
+  margin: 0;
+  width: 50%;
+}
+
+/* == IMAGES == */
+img {
+  width: 100%;
+}
+.proj_img_full{
+  width: 100%;
+  margin: 0;
+}
+.proj_img_center{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_tall{
+  width: 50%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_sm{
+  width: 40%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj_img_sideL{
+  min-width: 250px;
+  width: 40%;
+  float: left;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.proj_img_sideR{
+  min-width: 250px;
+  width: 45%;
+  float: right;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.proj_img_sideR_sm{
+  min-width: 50px;
+  width: 15%;
+  float: right;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+figcaption {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  text-align: center;
+  margin-bottom: 2em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.line-group > figcaption {
+  margin-bottom: 0;
+}
+
+/* == VIDEOS == */
+.vid_container {
+  position: relative;
+  /* width: 100%; */
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vid_sm {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vid_container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.vid_16x9 {
+	padding-bottom: 56.25%;
+}
+.vid_720 {
+  padding-bottom: 45.90%;
+}
+.vid_720x2 {
+  padding-bottom: 28%;
+  margin-bottom: 0.5em;
+}
+.vid_720_full {
+  padding-bottom: 56.20%;
+}
+.vid_4x3 {
+	padding-bottom: 75%;
+}
+.vid_sq {
+	padding-bottom: 50%;
+}
+.vid_side {
+  width: 45%;
+  /* padding-bottom: 22%; */
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.vid_ext {
+  width: 90%;
+  padding-bottom: 50.625%;
+  margin-top:    2em;
+  margin-bottom: 2em;
+}
+
+.col_50{
+  width: 45%;
+  display: inline-block;
+}</style>
+        <script>let header;
+let timekeep;
+let color;
+
+const c1 = [ 78,  49, 102];
+const c2 = [237, 100, 207];
+const c3 = [ 21, 192, 255];
+
+window.addEventListener('load', init);
+
+function init(){
+    header = document.querySelectorAll("header")[0];
+    timekeep = 0;
+    color = [0, 0, 0];
+
+    header.style.color = getColor(c1);
+
+    setInterval(update, 30);
+}
+
+
+function update(){
+    // update the timekeep
+    timekeep += 0.02;
+
+    // with a sine function we see if we go from c1 to c2 or c3
+    let t = Math.sin(timekeep);
+    let c;
+    if ( t>0 ) { c = c2; }
+    else { c = c3; }
+
+    // now we interpolate between both values
+    t = Math.abs(t);
+    for (let i = 0; i < color.length; i++) {
+        color[i] = lerp(c1[i], c[i], t);
+    }
+
+    // and change the color of the text
+    header.style.color = getColor(color);
+}
+
+
+// === UTILITY FUNCTIONS
+function getColor(c){
+    return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")";
+}
+function lerp(x0, x1, t){
+    return x0*(1-t) + x1*t;
+}</script>
+        <link href="../src/favicon.ico" rel="icon" />
     </head>
 
     <body>
@@ -15,63 +352,70 @@
             <span class="title"><a href="/">NE</a></span>
             <nav>
                 <a href="/">work</a>
-                
+                <!-- <a href="https://www.behance.net/nicolaspe">experiments</a> -->
+                <a href="/external">external</a>
                 <a href="/about">about</a>
             </nav>
         </header>
 
-        <main> 
+        <main> <!--
+title: "Collected Ego"
+date: "2018-11-30"
+display: true
+image: "img/portfolio/collectedego.jpg"
+weight: 1
+-->
 <h1>Collected Ego</h1>
-<p>A large scale audiovisual short about finding balance between self-discovery while relating to society.
+<p>A large scale audiovisual short about finding balance between self-discovery while relating to society.<!--more-->
 Made in collaboration with <a href="https://twitter.com/bellamutale">Annabel Mutale Reed</a>, <a href="https://twitter.com/JackTrzcinski">Jack Trzcinski</a>, and <a href="http://jarone.net/">Jarone Wright</a>.</p>
 <p>Presented at the <a href="http://www.iachq.com/">IAC Building</a> and the <a href="https://nymediacenter.com/events/event/?id=5E83FDD8-88A9-435E-8B4A3837B9ADF314&amp;slugid=expanded-cinema-vol-4-opening-reception">Made in NY Media Center by IFP</a>.</p>
-<figure class="vid_container vid_16x9 vid_ext" style="text-align:center">
+<figure class="vid_container vid_16x9 vid_ext" style="text-align: center">
   <iframe src="https://player.vimeo.com/video/315287383" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <br>
 <p><mark>Rhythm in doubt. Collected Ego is a journey of self-discovery and expression, being subjected to the gaze of society and finding yourself in inside of it.</mark></p>
 <p><br><br></p>
-<figure class="proj_img proj_img_full" style="text-align:center;display:block">
-	<img class="p_detail" style="width:47%" src="./media/ec_03.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center"> 
-	<img class="p_detail" style="width:47%" src="./media/ec_02.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center">
+<figure class="proj_img proj_img_full" style="text-align: center; display: block;">
+	<img class="p_detail" style="width:47%;" src="./media/ec_03.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center"> 
+	<img class="p_detail" style="width:47%;" src="./media/ec_02.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center">
 	<br>
-	<img class="p_detail" style="width:47%" src="./media/ec_05.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center"> 
-	<img class="p_detail" style="width:47%" src="./media/ec_01.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center">
+	<img class="p_detail" style="width:47%;" src="./media/ec_05.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center"> 
+	<img class="p_detail" style="width:47%;" src="./media/ec_01.jpg" alt="Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center">
 	<figcaption>Collected Ego at Expanded Cinema Vol 4 @ Made in NY Media Center</figcaption>
 </figure>
 <div class="line-group">
 <p class="sideR">In order to create contrast between the self and a homogenous society, we built a digital environment of replicated avatars that differentiate themselves from real life footage and choreography. This choreography was also recorded in a motion capture studio, bringing it into the fabricated 3d environment. This gave an uncanny characteristic to this very human movement, as the mass of avatars replicated each step with supernatural precision and timing.</p>
-<figure class="proj_img proj_img_sm" style="text-align:center">
+<figure class="proj_img proj_img_sm" style="text-align: center">
     <img class="p_detail" src="./media/ce_mocap.jpg" alt="Me, preparing for mocap">
 </figure>
 </div>
-<figure class="vid_container" style="text-align:center;padding-bottom:46%">
+<figure class="vid_container" style="text-align: center; padding-bottom: 46%">
 	<video class="vid_doc" autoplay loop muted>
-        <source src="./media/ce_motionbuilder.mp4" type="video/mp4">
+        <source src="./media/ce_motionbuilder.mp4"  type="video/mp4">
         <source src="./media/ce_motionbuilder.webm" type="video/webm">
 	</video>
 	<figcaption>Retargeting the motion captured animation to the digital dancer in MotionBuilder</figcaption>
 </figure>
-<div class="vid_full" style="display:flex">
-	<figure class="vid_container vid_sq" style="text-align:center">
-        <video class="vid_doc" autoplay loop muted width="40%">
+<div class="vid_full" style="display: flex;">
+	<figure class="vid_container vid_sq" style="text-align: center">
+        <video class="vid_doc" autoplay loop muted width="40%" />
             <source src="./media/ce_process01.mp4" type="video/mp4">
-            
-        
+            <!-- <source src="./media/ce_process01.webm" type="video/webm"> -->
+        </video>
     </figure>
-    <figure class="vid_container vid_sq" style="text-align:center">
-        <video class="vid_doc" autoplay loop muted width="40%">
+    <figure class="vid_container vid_sq" style="text-align: center">
+        <video class="vid_doc" autoplay loop muted width="40%" />
             <source src="./media/ce_process02.mp4" type="video/mp4">
-            
-        
+            <!-- <source src="./media/ce_process02.webm" type="video/webm"> -->
+        </video>
     </figure>
 </div>
 <figcaption>Testing different digital environments and styles in Unreal Engine for the piece.</figcaption>
-<p><br><a href="#" onclick="return history.go(-1),!0">&lt; Go Back</a></p>
+<p><br><a href="#" onClick="history.go(-1);return true;">&lt; Go Back</a></p>
  </main>
 
         <footer>
-            <br>
+            <br />
             <p>website coded + designed by nicolás escarpentier - Sep 2019</p>
         </footer>
     </body>
