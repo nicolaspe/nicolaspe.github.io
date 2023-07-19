@@ -13,7 +13,7 @@ weight: 1
 <mark>Spearheaded the creation of a $40k+  virtual-production capable greenscreen studio, from proposal and budget stage, to execution, operation, maintenance, and upgrades.</mark>
 
 <figure class="proj_img proj_img_full" style="text-align: center">
-	<img class="p_capture" src="./media/gsst_bk_wide02.png" alt="First greenscreen studio iteration">
+	<img class="p_capture" src="./media/gsst_bk_wide2.png" alt="First greenscreen studio iteration">
     <figcaption>First greenscreen studio iteration</figcaption>
 </figure>
 

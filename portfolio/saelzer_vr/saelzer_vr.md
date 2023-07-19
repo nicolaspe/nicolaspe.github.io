@@ -39,7 +39,7 @@ As an integral part of this project, I maintained a close relation with the clie
 For the exhibition of the piece at BAU 2023, I was in charge of its on-site setup, maintenance, and operation. 
 
 <br> <figure class="proj_img proj_img_full" style="text-align: center">
-    <img class="p_capture" src="SaeVR_BAU_01.png" alt="Two images of people at the conference trying out the VR experience with the VR docents helping and monitoring them"/>
+    <img class="p_capture" src="./media/SaeVR_BAU_01.png" alt="Two images of people at the conference trying out the VR experience with the VR docents helping and monitoring them"/>
     <figcaption>The VR short being experienced by the audience of BAU 2023 in the Schüco booth</figcaption>
 </figure>
 
