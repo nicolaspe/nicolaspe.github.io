@@ -84,6 +84,8 @@ function loadProjects(){
         proj_slugs.push( p_slug );
         proj_desc[p_slug] = proj["desc"];
         proj_tags[p_slug] = proj["tags"];
+
+        console.log(">> Adding: "+ p_name);
       }
     });
 
