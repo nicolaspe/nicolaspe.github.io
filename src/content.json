@@ -2,6 +2,27 @@
   "menu": ["work", "about"],
   "portfolio": [
     {
+      "name": "Sälzer VR",
+      "slug": "saelzer_vr",
+      "desc": "Marketing-based short VR film for BAU 2023",
+      "tags": "#UnrealEngine #VR #exhibition",
+      "display": 1
+    },
+    {
+      "name": "Greenscreen Studio",
+      "slug": "greenscreen_studio",
+      "desc": "Creation of a virtual-production from proposal to execution",
+      "tags": "#UnrealEngine #studio",
+      "display": 1
+    },
+    {
+      "name": "Video Productions",
+      "slug": "video_productions",
+      "desc": "A series of productions done while in VCL",
+      "tags": "#editing #production",
+      "display": 1
+    },
+    {
       "name": "heart of a survivor",
       "slug": "heart_survivor",
       "desc": "Life-based interactive VR journey",
