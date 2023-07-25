@@ -3,7 +3,7 @@ I have provided a diverse set of services to a wide variety of clients, ranging 
 
 
 ## *Ana Min Wein? (Where am I from?)* 
-*for Nouf Aljowaysir*
+*for [Nouf Aljowaysir](http://www.noufaljowaysir.com/)*
 
 **Role: Producer and Creative Support**
 
@@ -59,7 +59,7 @@ This dual software was robust enough to work without issues over several shows p
 
 
 ## *1991* 
-*for Akmyrat Tuyliyev*
+*for [Akmyrat Tuyliyev](https://www.akmyrat.com/)*
 
 **Role: Lead VR Developer**
 

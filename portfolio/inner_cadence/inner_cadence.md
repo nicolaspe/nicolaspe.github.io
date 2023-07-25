@@ -32,7 +32,8 @@ To capture movement data, I could rely on different technologies:
 
 Despite having access to a motion capture studio and it being the most reliable source of motion data, this option would have made it impossible to create an interactive installation. The process of installing the entire system is highly complex, and the studio itself does not provide a suitable location for the project. For pose detection algorithms, there are several alternatives, such as [CMU's OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and [tensorflow's PoseNet](https://github.com/tensorflow/tfjs-models/tree/master/posenet). These models have become increasingly reliable, can run in real-time given the proper computer and require just a webcam. But the data they provide is only 2d, same as the input they receive, limiting the information I could process. In order to get 3d data with a portable equipment, I decided to use a Kinect v2, which provides real-time skeletal tracking and depth perception.
 
-<br> <figure class="proj_img proj_img_full" style="text-align: center">
+<br>
+<figure class="proj_img proj_img_full" style="text-align: center">
 	<img class="p_capture" src="./media/ic_capture.jpg" alt="Left: Kinect v2 and computer setup. Right: Computer screen showing Kinect camera view and skeletal tracking">
 </figure>
 <figcaption>Studio setup for movement capture. With a Kinect v2 and openFrameworks, I captured more than 20 users for 30 seconds in different poses.</figcaption>
